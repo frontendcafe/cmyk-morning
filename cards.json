@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Yoga",
+    "location": "Córdoba, Argentina",
+    "price": "$500/h",
+    "date": "10 de mayo del 2021",
+    "iconHeart": "./img/heart.svg",
+    "iconGroup": "./img/group.svg",
+    "iconLocation": "./img/location.svg",
+    "img": "./img/yoga.png"
+  },
+  {
+    "title": "Cyclism",
+    "location": "Córdoba, Argentina",
+    "price": "$500/h",
+    "date": "10 de mayo del 2021",
+    "iconHeart": "./img/heart.svg",
+    "iconGroup": "./img/group.svg",
+    "iconLocation": "./img/location.svg",
+    "img": "./img/yoga.png"
+  },
+  {
+    "title": "MMA",
+    "location": "Córdoba, Argentina",
+    "price": "$500/h",
+    "date": "10 de mayo del 2021",
+    "iconHeart": "./img/heart.svg",
+    "iconGroup": "./img/group.svg",
+    "iconLocation": "./img/location.svg",
+    "img": "./img/yoga.png"
+  }
+]
