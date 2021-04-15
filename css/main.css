@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 10%;
+}
+
+.header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__nav {
+  background-color: #a1e5f4;
+  padding: 1em 6em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__nav__title {
+  display: flex;
+  align-items: baseline;
+}
+
+.header__nav__title img {
+  margin-right: 1em;
+}
