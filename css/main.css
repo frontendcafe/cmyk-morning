@@ -19,7 +19,7 @@ body {
   color: inherit;
 }
 
-.header__nav {
+.nav {
   background-color: #a1e5f4;
   padding: 1em 6em;
   display: flex;
@@ -28,11 +28,37 @@ body {
   justify-content: space-between;
 }
 
-.header__nav__title {
+.nav__title {
   display: flex;
   align-items: baseline;
 }
 
-.header__nav__title img {
+
+.nav__title img {
   margin-right: 1em;
+}
+
+                                  /* Nav hamburguer to smaller devices */
+
+.nav__hamburguer{
+    display: none;
+}
+
+.hamburguer{
+    background: transparent;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    width: 60px;
+    height: 60px;
+
+}
+
+.hamburguer span{
+    border-radius: 5px;
+    background: #fff;
+    display: block;
+    width: 60%;
+    margin: 5px auto;
+    height: 2px;
 }
