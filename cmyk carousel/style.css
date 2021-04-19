@@ -1,0 +1,332 @@
+
+#canvas{
+	height: 215.994px;
+	width: auto;
+	padding: 0px;
+}
+body {
+    background: EEE7D5;
+    font-family: 'Libre Baskerville';
+}
+
+.ellipse5 {
+	position: absolute;
+	width: 115px;
+	height: 90px;
+	left: 149px;
+	top: 120px;
+
+}
+
+
+#cardbox {
+
+    width: 381px;
+	height: 216px;
+    margin: 0 auto;
+/* 	top: 652px; */
+	left: 87px;
+    border-radius: 26px;
+    overflow: hidden;
+    display:inline-block;
+	position: absolute;
+	background: linear-gradient(64.7deg, #7D42F5 0%, #43DBE6 100%);
+	box-shadow: 0px 10px 35px rgba(74, 128, 240, 0.2);
+}
+
+.rectangle {
+position: absolute;
+width: 381px;
+height: 162px;
+left: 0px;
+top: 0px;
+
+background: radial-gradient(153.74% 864.67% at 100% 100%, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.42) 91.04%);
+background-blend-mode: overlay;
+border: 1px solid rgba(255, 255, 255, 0.3);
+border-radius: 26px;
+box-sizing: border-box;
+backdrop-filter: blur(6px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 26px 26px 0px 0px;
+}
+
+
+#cardbox h2 {
+	position: relative;
+	display: block;
+	width: 325px;
+	height: 28px;
+	left: 30px;
+	margin: 0px;
+	top:26px;
+	
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 29px;
+	text-align: center;
+	letter-spacing: 0.8px;
+	
+	color: #FFFFFF;
+	
+	text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);}
+
+#cardbox h3 {
+position: relative;
+display: inline;
+width: 325px;
+height: 28px;
+left: 80px;
+top: 36px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: lighter;
+font-size: 24px;
+text-align: center;
+letter-spacing: 0.8px;
+
+color: #FFFFFF;
+
+text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);}
+
+
+#cardbox h4 {
+	position: relative;
+	display: inline;
+	width: 381px;
+	height: 27px;
+	left: -180px;
+	top: 115px;
+	margin-top: 0px;
+	
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 22px;
+	/* or 122% */
+	
+	letter-spacing: -0.408px;
+	
+	color: #FFFFFF;
+	
+	opacity: 0.7;
+}
+
+#cardbox img {
+    float: left;
+    margin-left: 10px;
+	height: 20px;
+    width: auto;
+}
+
+#cardbox p {
+    color: #1E3A40;
+    font-size: .9em;
+}
+
+#canvas #prev_btn {
+    background: #ffffff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    display: inline-flex;
+	top: -30px;
+	left: 0px;
+	position: relative;
+	display: inline-block;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 100;
+	font-size: 200px;
+	
+
+}
+
+#canvas #next_btn{
+    background: #ffffff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    display: inline-flex;
+	top: -30px;
+	left: 380px;
+	position: relative;
+	display: inline-block;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 100;
+	font-size: 200px;
+
+}
+
+#canvas a#next_btn, #canvas a#prev_btn {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+	
+}
+
+
+
+
+/* 
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************************************************************
+END OF: KODE KITCHEN STYLES START HERE 
+******************************************************************************/
+
+@media (max-width: 1024px) { 
+	#canvas {
+	    padding:40px;
+    	width: auto;
+	}
+	#primaryContent {
+		width: 65%;
+	}
+	#secondaryContent {
+	    border-width: 5px;
+    	width: 18%;
+	}	
+	img {
+		margin: 10px 0;
+		height: auto;
+    	max-width: 97%;
+	}
+}
+@media (max-width: 800px) { 
+	.main-menu {
+   		height: auto;
+		text-align: center;
+	}
+	.main-menu ul {
+		background:url(images/nav-bg.gif) repeat-x scroll left bottom;
+	}
+	.main-menu ul li {
+    	display: inline;
+    	float: none;
+    }
+    .main-menu ul li {
+    	display: inline-block;
+    }
+    .main-menu li a {
+    	display: inline-block;
+    }
+    .main-menu ul ul {
+    	text-align: left;
+    }
+	#primaryContent {
+		float: none;
+		margin-right: 0;
+		width: auto;
+	}
+	#secondaryContent {
+   		 clear: both;
+   		 width: auto;
+	}
+	#secondaryContent > ul > li {
+  		 float: left;	
+    	 width: 33%;
+    }	 
+	#secondaryContent ul ul {
+   		 float: left;
+    	 width: auto;
+	}
+	#secondaryContent li {
+    	border-bottom: none;
+    } 
+    #secondaryContent li li{
+    	border-bottom: 1px dotted #D1BFA6;
+    }
+	li.postWrapper, div.postWrapper {
+		margin-bottom: 30px;
+	}
+	.pagination-older,
+	.pagination-newer {
+		margin-bottom: 20px;
+	}	
+
+}
+
+
+@media screen and (max-width: 480px) {
+	#canvas {
+		padding:10px;
+	}
+	.main-menu {
+    	height: auto;
+    }	
+	#primaryContent {
+		margin:0;
+	}
+	#secondaryContent {
+    	width: 89%;
+    }
+    #secondaryContent > ul > li {
+    	float: none;
+    	width: auto;
+	}
+	#secondaryContent ul ul {
+   		 float: none;
+	}
+	#site-title a,
+	#site-description  {
+		background:none;
+		font-size:40px;
+    	line-height: 1em;
+	}
+	#site-description  {
+		font-size:25px;
+		margin:10px;
+	}
+	img {
+		margin:0;
+		padding:0;
+		max-width:100%;
+		height:auto;	
+	}
+}
+
+/* 
+ * print styles
+ * inlined to avoid required HTTP connection www.phpied.com/delay-loading-your-print-css/ 
+ */
+@media print {
+  * { background: transparent !important; color: #444 !important; text-shadow: none !important; }
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a:after { content: " (" attr(href) ")"; } 
+  abbr:after { content: " (" attr(title) ")"; }
+  .ir a:after { content: ""; }  /* Don't show links for images */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */ 
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
