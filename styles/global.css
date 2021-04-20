@@ -7,11 +7,11 @@ body {
 main {
   min-height: 100%;
 }
+
 .footer a {
   text-decoration: none;
   color: inherit;
 }
-
 .footer__items {
   background-color: rgba(255, 196, 176, 0.753);
   display: flex;
@@ -22,7 +22,8 @@ main {
   height: 8%;
   margin-top: -3.5rem;
 }
-
 .footer__text {
   padding: 0 15px;
 }
+
+/*# sourceMappingURL=global.css.map */
