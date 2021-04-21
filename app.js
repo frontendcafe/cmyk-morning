@@ -1,3 +1,8 @@
+const $cards = document.getElementById("cards");
+const $card = document.querySelector(".card");
+
+// ----------------- Data of the JSON in the cards -------------------------
+
 document.addEventListener("DOMContentLoaded", () => {
   const http = new XMLHttpRequest();
   const $container = document.querySelector("#cards");
@@ -14,10 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       for (const card of cards) {
         $container.innerHTML += `
+
 	<div class="card">
 
-	  <h3>${card.title}</h3>
-	  <p>${card.location}</p>
+	  <h3>${card.sport}</h3>
+	  <p>${card.city}, ${card.country}</p>
 
 	  <div class="footer-card">
 
@@ -25,12 +31,74 @@ document.addEventListener("DOMContentLoaded", () => {
 	     <i class="fas fa-heart"></i>
 	     <i class="fas fa-users"></i>
 	   </div>
-	   <p>${card.price}</p>
+	   <p>${card.cost}</p>
 
 	  </div>
 
-	</div>`;
+	</div>
+
+	  `;
       }
     }
   };
+});
+
+// ------------------------- Scroll of the cards --------------------------------------
+
+document.querySelector(".buttonRight").addEventListener("click", () => {
+
+
+  if (window.matchMedia("(max-width: 600px)").matches) {
+
+    $cards.scrollLeft += 317;
+
+  } else if (window.matchMedia("(max-width: 900px)").matches) {
+
+    $cards.scrollLeft += 317*2;
+
+  } else if (window.matchMedia("(max-width: 1200px)").matches) {
+
+    $cards.scrollLeft += 317*3;
+
+  } else if (window.matchMedia("(max-width: 1600px)").matches) {
+
+    $cards.scrollLeft += 317*4;
+
+  } else {
+
+    $cards.scrollLeft += 317*5;
+
+  }
+
+
+});
+
+
+
+document.querySelector(".buttonLeft").addEventListener("click", () => {
+
+
+  if (window.matchMedia("(max-width: 600px)").matches) {
+
+    $cards.scrollLeft -= 317;
+
+  } else if (window.matchMedia("(max-width: 900px)").matches) {
+
+    $cards.scrollLeft -= 317*2;
+
+  } else if (window.matchMedia("(max-width: 1200px)").matches) {
+
+    $cards.scrollLeft -= 317*3;
+
+  } else if (window.matchMedia("(max-width: 1600px)").matches) {
+
+    $cards.scrollLeft -= 317*4;
+
+  } else {
+
+    $cards.scrollLeft -= 317*5;
+
+  }
+
+
 });
