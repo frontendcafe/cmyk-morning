@@ -21,7 +21,6 @@ body {
 
 .nav {
   background-color: #a1e5f4;
-  padding: 1em 6em;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -31,34 +30,53 @@ body {
 .nav__title {
   display: flex;
   align-items: baseline;
-}
+}  
 
+.nav__about-us{
+  display: none;
+}
 
 .nav__title img {
-  margin-right: 1em;
-}
-
-                                  /* Nav hamburguer to smaller devices */
-
-.nav__hamburguer{
-    display: none;
+  margin: 0 .5em;
 }
 
 .hamburguer{
-    background: transparent;
-    cursor: pointer;
-    border: 0;
-    padding: 0;
-    width: 60px;
-    height: 60px;
+  background: transparent;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  width: 60px;
+  height: 60px;
 
 }
 
 .hamburguer span{
-    border-radius: 5px;
-    background: #fff;
-    display: block;
-    width: 60%;
-    margin: 5px auto;
-    height: 2px;
+  border-radius: 5px;
+  background: #fff;
+  display: block;
+  width: 60%;
+  margin: 5px auto;
+  height: 2px;
 }
+
+@media screen and (min-width: 48rem) {
+  .nav {
+    padding: 1em 6em;
+  }
+  
+  .nav__about-us{
+    display: block;
+  }
+
+  .nav__hamburguer{display: none;}
+
+  .nav__title img {
+    margin-right: 1em;
+  }
+}
+
+
+
+
+
+
