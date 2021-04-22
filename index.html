@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles/global.css" />
-  </head>
 
-  <body>
-    <header></header>
-    <main></main>
-    <footer class="footer footer__items">
-      <span class="footer__text">Made by team</span>
-      <a href=""
-        ><img
-          src="./img/morning-icon.png"
-          alt="morning"
-          srcset=""
-          class="footer__image"
-      /></a>
-      <span class="footer__text">CMYK 3 by</span>
-      <a href="https://frontend.cafe/" target="_blank"
-        ><img
-          src="./img/frontendcafe-icon.png"
-          alt="frontcafe"
-          srcset=""
-          class="footer__image"
-      /></a>
-    </footer>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/global.css" />
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="nav__title">
+        <img src="./img/morning-icon.png" alt="Morning Icon" />
+        <h1><a href="#">MornMeet Training</a></h1>
+      </div>
+      <div class="nav__about-us">
+        <h2><a href="#">About Us</a></h2>
+      </div>
+      <div class="nav__hamburguer">
+        <button class="hamburguer">
+          <span class="hamburuger__topLine"></span>
+          <span class="hamburuger__middleLine"></span>
+          <span class="hamburguer__bottomLine"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main></main>
+
+  <footer class="footer footer__items">
+    <span class="footer__text">Made by team</span>
+    <a href=""><img src="./img/morning-icon.png" alt="morning" srcset="" class="footer__image" /></a>
+    <span class="footer__text">CMYK 3 by</span>
+    <a href="https://frontend.cafe/" target="_blank"><img src="./img/frontendcafe-icon.png" alt="frontcafe" srcset=""
+        class="footer__image" /></a>
+  </footer>
+</body>
+
 </html>

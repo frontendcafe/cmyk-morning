@@ -1,11 +1,85 @@
+html {
+  font-size: 62.5%;
+}
+
 body {
+  font-size: 16px; 
   margin: 0;
   height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 main {
-  min-height: calc(100vh - 8%);
+  min-height: calc(100vh - 16%);
+}
+
+h1, h2 {
+  font-size: 2rem
+}
+
+
+.header {
+  height: 8%;  
+    
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.nav {
+  background-color: #a1e5f4;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__about-us {
+    display: none;
+  }
+
+  &__title img {
+    margin: 0 0.5em;
+  }
+}
+
+.hamburguer {
+  background: transparent;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+
+  span {
+    border-radius: 5px;
+    background: #fff;
+    display: block;
+    width: 60%;
+    margin: 5px auto;
+    height: 2px;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .nav {   
+    padding: 0 6em;
+
+    &__about-us {
+      display: block;
+    }
+    &__hamburguer {
+      display: none;
+    }
+    &__title img {
+      margin-right: 1em;
+    }
+  }
 }
 
 .footer {
