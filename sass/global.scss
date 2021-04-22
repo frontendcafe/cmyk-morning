@@ -1,11 +1,139 @@
-body {
+
+$header: #a1e5f4;
+$light: #fff;
+$footer: rgba(255, 196, 176, 0.753);
+
+* {
   margin: 0;
-  height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 90vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.header {
+  width: 100%;
+  height: 8%;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.nav {
+  background-color: $header;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    display: flex;
+    align-items: baseline;
+
+    img {
+      margin: 0 0.5em;
+    }
+  }
+
+  &__aboutUs {
+    display: none;
+  }
+}
+
+.hamburguer {
+  background: transparent;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+
+  span {
+    border-radius: 5px;
+    background: $light;
+    display: block;
+    width: 60%;
+    margin: 5px auto;
+    height: 2px;
+  }
+}
+
 main {
-  min-height: 100%;
+  min-height: calc(100vh - 16%);
+}
+
+h1, h2 {
+  font-size: 2rem
+}
+
+
+.header {
+  height: 8%;  
+    
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.nav {
+  background-color: #a1e5f4;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__aboutUs {
+    display: none;
+  }
+
+  &__title img {
+    margin: 0 0.5em;
+  }
+}
+
+.hamburguer {
+  background: transparent;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+
+  span {
+    border-radius: 5px;
+    background: #fff;
+    display: block;
+    width: 60%;
+    margin: 5px auto;
+    height: 2px;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .nav {   
+    padding: 0 6em;
+
+    &__aboutUs {
+      display: block;
+    }
+    &__hamburguer {
+      display: none;
+    }
+    &__title img {
+      margin-right: 1em;
+    }
+  }
 }
 
 .footer {
@@ -15,17 +143,35 @@ main {
   }
 
   &__items {
-    background-color: rgba(255, 196, 176, 0.753);
+    background-color: $footer;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;
     height: 8%;
-    margin-top: -3.5rem;
   }
 
   &__text {
     padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .nav {
+    padding: 1em 6em;
+
+    &__aboutUs {
+      display: block;
+    }
+
+    &__hamburguer {
+      display: none;
+    }
+
+    &__title {
+      img {
+        margin-right: 1em;
+      }
+    }
   }
 }
