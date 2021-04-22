@@ -1,12 +1,66 @@
-html {
-  font-size: 62.5%;
+
+$header: #a1e5f4;
+$light: #fff;
+$footer: rgba(255, 196, 176, 0.753);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-size: 16px; 
-  margin: 0;
-  height: 100vh;
+  height: 90vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 8%;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.nav {
+  background-color: $header;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    display: flex;
+    align-items: baseline;
+
+    img {
+      margin: 0 0.5em;
+    }
+  }
+
+  &__aboutUs {
+    display: none;
+  }
+}
+
+.hamburguer {
+  background: transparent;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+
+  span {
+    border-radius: 5px;
+    background: $light;
+    display: block;
+    width: 60%;
+    margin: 5px auto;
+    height: 2px;
+  }
 }
 
 main {
@@ -39,7 +93,7 @@ h1, h2 {
     align-items: baseline;
   }
 
-  &__about-us {
+  &__aboutUs {
     display: none;
   }
 
@@ -70,7 +124,7 @@ h1, h2 {
   .nav {   
     padding: 0 6em;
 
-    &__about-us {
+    &__aboutUs {
       display: block;
     }
     &__hamburguer {
@@ -89,7 +143,7 @@ h1, h2 {
   }
 
   &__items {
-    background-color: rgba(255, 196, 176, 0.753);
+    background-color: $footer;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -99,5 +153,25 @@ h1, h2 {
 
   &__text {
     padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .nav {
+    padding: 1em 6em;
+
+    &__aboutUs {
+      display: block;
+    }
+
+    &__hamburguer {
+      display: none;
+    }
+
+    &__title {
+      img {
+        margin-right: 1em;
+      }
+    }
   }
 }

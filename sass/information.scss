@@ -1,15 +1,21 @@
-html {
-  font-size: 62.5%;
-}
-
-body {  
-  font-size: 16px; 
-  background-color: #af90e4;  
-}
+$light: #fff;
+$dark: #000;
+$cycling: #af90e4;
+$button: #6f6c6e;
+$form: #9d9d9d;
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $cycling;
+}
+
+main {
+  padding: 5px 10px;
 }
 
 .section {
@@ -17,52 +23,69 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: initial;
-  
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
 
   &__title {
-    display: flex;      
-    align-items: center;   
-    color: white;
-    margin: 0 3rem;
-    margin-top: 2rem;
-    font-size: 2rem;
+    padding: 0 0 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    order: 0;
+    color: $light;
+    font-size: 1.3rem;
   }
 
-  &__activity-image {
+  &__image {
     order: 2;
-    width: 80%;  
+    max-width: 60%;
     margin: 0 auto;
-    border-radius: 1rem;
+    border-radius: 10px;
   }
 
-  &__data {    
-    margin: 2rem 4rem;  
+  &__data {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    order: 0;
+    margin-bottom: 1rem;
   }
 
   &__info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
+    width: 75%;
   }
 
-  &__info p {
-    font-size: 1.5rem !important;
-    margin: 1rem 0;
-  }
-
-  &__info-location {
-    display: flex;    
+  &__location {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    color: white;    
-  }
-  &__info-location p {
-    font-size: 1rem;
-    font-weight: bolder;
-    padding-left: 0.5rem;
+    color: $light;
+    padding-bottom: 10px;
   }
 
-  &__info-text {
+  &__location {
+    p {
+      font-size: 1rem;
+      font-weight: bolder;
+      padding-left: 0.5rem;
+    }
+  }
+
+  &__info {
+    p {
+      padding: 0.2rem 0;
+    }
+  }
+
+  &__description {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,115 +94,157 @@ body {
     font-weight: bolder;
   }
 
-  &__info-price {
-    color: white;
+  &__price {
+    color: $light;
   }
 
-  &__data_icons {
-    display: flex;    
-    justify-content: center;
-    font-size: 2rem;
-    color: white; 
-    
-    i {
-      margin: 0 3rem;
-    }
+  &__icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+    margin-bottom: 0.7rem;
+    font-size: 0.7rem;
+    color: $light;
   }
 }
 
 .fa {
   &-caret-left {
-    color: black;
+    color: $dark;
     padding-right: 1.5rem;
   }
-}
 
-@media (min-width: 768px) {
-  body {
-    background-color: white;   
+  &-map-marker-alt {
+    padding-right: 0.2rem;
   }
 
-  .section {
-    flex-flow: row wrap;
+  &-heart {
+    padding-bottom: 0.5rem;
+  }
 
-    &__activity {
-      width: 100%;
-    }
-
-    &__title {
-      color: black;    
-      margin-bottom: 2rem;  
-    }
-
-    &__activity-image {
-      order: 0;
-      width: 40%; 
-      margin-top: 1rem;
-    }
-
-    &__data {  
-      display: flex;  
-      flex-direction: column; 
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto;
-   
-    }
-    
-    &__info p {      
-      line-height: 2rem;
-      text-align: right;
-    }
-
-    &__info-location {
-      color: black;
-    }
-
-    &__info-price {
-      color: black;
-    }   
-
-    &__data_icons {    
-      font-size: 3rem;    
-      margin-top: 1rem;
-      color: black;
-      width: 100%;
-    }
-  }  
+  &-users {
+    padding-top: 1.5rem;
+  }
 }
 
 // Form
 .form {
   width: min(40rem, 100%);
-  margin: 0 auto;  
+  margin: 0 auto;
 
-  &__container {   
+  &__container {
     margin: 3rem 1rem;
   }
 
   input:not([type="submit"]) {
-    background-color: #6f6c6e;    
+    background-color: $button;
+    color: $light;
     padding: 1rem;
-    width:95%;
+    width: 95%;
     margin-bottom: 2rem;
     border: none;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
   }
 
   &__buttom {
-    background-color: #9d9d9d;    
-    padding: 2rem;
-    width: 100%;
-    color: white;
+    background-color: $form;
+    padding: 1.5rem;
+    width: 95%;
+    color: $light;
     border: none;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
   }
 
   input::placeholder {
-    color: white;
+    color: $light;
+  }
+
+  input:focus {
+    outline: none;
   }
 
   &__buttom:hover {
     cursor: pointer;
+    background-color: $dark;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: $light;
+  }
+
+  main {
+    margin: auto;
+    width: 100%;
+  }
+
+  .section {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__title {
+      width: 100%;
+      padding: 0 0 1.2rem 3rem;
+      color: $dark;
+      font-weight: bolder;
+      font-size: 1.5rem;
+    }
+
+    &__image {
+      order: 0;
+      width: 35%;
+      height: 25%;
+      margin: 1rem 6rem 0 0;
+    }
+
+    &__data {
+      order: 1;
+      width: 30%;
+      margin: 0;
+      padding: 0;
+      flex-direction: column;
+    }
+
+    &__info {
+      width: 100%;
+
+      p {
+        font-size: 1.1rem;
+        line-height: 2rem;
+        text-align: right;
+      }
+    }
+
+    &__location {
+      color: $dark;
+    }
+
+    &__price {
+      color: $dark;
+    }
+
+    &__description {
+      justify-content: right;
+      align-items: right;
+    }
+
+    &__icons {
+      flex-direction: row;
+      justify-content: space-evenly;
+      font-size: 1rem;
+      margin-top: 1.3rem;
+      color: $dark;
+    }
+  }
+
+  .fa-heart {
+    padding: 0 2rem;
+  }
+
+  .fa-users {
+    padding: 0 2rem;
   }
 }
