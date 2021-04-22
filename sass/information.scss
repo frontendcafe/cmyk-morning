@@ -147,7 +147,11 @@ body {
 // Form
 .form {
   width: min(40rem, 100%);
-  margin: 2rem auto;  
+  margin: 0 auto;  
+
+  &__container {   
+    margin: 3rem 1rem;
+  }
 
   input:not([type="submit"]) {
     background-color: #6f6c6e;    
