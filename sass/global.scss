@@ -1,3 +1,7 @@
+$header: #a1e5f4;
+$light: #fff;
+$footer: rgba(255, 196, 176, 0.753);
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +9,7 @@
 }
 
 body {
-  height: 100vh;
+  height: 90vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -20,7 +24,7 @@ body {
 }
 
 .nav {
-  background-color: #a1e5f4;
+  background-color: $header;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -50,7 +54,7 @@ body {
 
   span {
     border-radius: 5px;
-    background: #fff;
+    background: $light;
     display: block;
     width: 60%;
     margin: 5px auto;
@@ -69,14 +73,13 @@ main {
   }
 
   &__items {
-    background-color: rgba(255, 196, 176, 0.753);
+    background-color: $footer;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 8%;
-    margin-top: -3.5rem;
   }
 
   &__text {
