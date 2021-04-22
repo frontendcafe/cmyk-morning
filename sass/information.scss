@@ -1,6 +1,8 @@
 $light: #fff;
 $dark: #000;
 $cycling: #af90e4;
+$button: #6f6c6e;
+$form: #9d9d9d;
 
 * {
   margin: 0;
@@ -124,6 +126,48 @@ main {
 
   &-users {
     padding-top: 1.5rem;
+  }
+}
+
+// Form
+.form {
+  width: min(40rem, 100%);
+  margin: 0 auto;
+
+  &__container {
+    margin: 3rem 1rem;
+  }
+
+  input:not([type="submit"]) {
+    background-color: $button;
+    color: $light;
+    padding: 1rem;
+    width: 95%;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 0.5rem;
+  }
+
+  &__buttom {
+    background-color: $form;
+    padding: 1.5rem;
+    width: 95%;
+    color: $light;
+    border: none;
+    border-radius: 0.5rem;
+  }
+
+  input::placeholder {
+    color: $light;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  &__buttom:hover {
+    cursor: pointer;
+    background-color: $dark;
   }
 }
 

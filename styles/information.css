@@ -104,6 +104,41 @@ main {
   padding-top: 1.5rem;
 }
 
+.form {
+  width: min(40rem, 100%);
+  margin: 0 auto;
+}
+.form__container {
+  margin: 3rem 1rem;
+}
+.form input:not([type=submit]) {
+  background-color: #6f6c6e;
+  color: #fff;
+  padding: 1rem;
+  width: 95%;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+.form__buttom {
+  background-color: #9d9d9d;
+  padding: 1.5rem;
+  width: 95%;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+}
+.form input::placeholder {
+  color: #fff;
+}
+.form input:focus {
+  outline: none;
+}
+.form__buttom:hover {
+  cursor: pointer;
+  background-color: #000;
+}
+
 @media (min-width: 768px) {
   body {
     background-color: #fff;
