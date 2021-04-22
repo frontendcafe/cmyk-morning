@@ -77,9 +77,13 @@ body {
 
   &__data_icons {
     display: flex;    
-    justify-content: space-evenly;
+    justify-content: center;
     font-size: 2rem;
-    color: white;
+    color: white; 
+    
+    i {
+      margin: 0 3rem;
+    }
   }
 }
 
