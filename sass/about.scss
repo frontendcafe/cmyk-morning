@@ -1,0 +1,38 @@
+
+body {
+    background: linear-gradient(243.03deg, #C4CAEF 0.41%, rgba(237, 192, 191, 0) 100%);   
+}
+h1 {
+    margin: 1rem 0;    
+}
+.aboutUs {     
+    margin: 0 20rem;    
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin: 1rem 1rem;   
+
+    &__card:nth-child(1) {
+        grid-column: 2 / 3;
+    }
+    &__card:nth-child(2) {
+        grid-column: 1 / 2;
+    }
+
+    &__card h3, p{
+        text-align: center;
+        margin: .5rem;
+    }  
+    &__card .we {
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    &__icons {
+        text-align: center;
+        font-size: 2rem;
+    }
+}
