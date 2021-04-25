@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  background: #edc0bf;
+  background: linear-gradient(90deg, #edc0bf 0,#c4caef 58%);
+}
+
+header {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  background-color: #4ECEEB;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.title-img {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 10px;
+  padding: 10px;
+}
+
+.title-img img {
+  min-width: 290px;
+}
+
+h2 {
+  width: 250px;
+
+  text-align: center;
+}
+
+span {
+  color: #FC541D;
+}
+
+.cardsNavigation {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  min-width: 250px;
+}
+
+.cardsNavigation button {
+  position: absolute;
+  height: 50%;
+
+  background-color: rgba(0, 0, 200, .1); 
+  border: 1px solid rgba(100, 10, 200, .1);
+}
+
+.cardsNavigation button:focus {
+  border: 1px solid rgba(100, 10, 200, .1);
+}
+
+.cardsNavigation button i {
+  font-size: 30px;
+
+  color: rgba(100, 10, 200, .3);
+}
+
+.cardsNavigation .buttonRight {
+  right: 0;
+}
+
+.cardsNavigation .buttonLeft {
+  left: 0;
+}
+
+#cards {
+  display: flex;
+
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.card {
+  margin: 0 5px 0 0;
+  padding: 10px;
+  min-width: 290px;
+  max-width: 390px;
+
+  text-align: center;
+
+  color: #000;
+  border-radius: 5px;
+}
+
+.card:nth-child(2n){
+
+  background: linear-gradient(64.7deg, #7D42F5 0%, #43DBE6 100%);
+
+}
+
+.card:nth-child(2n+1){
+  
+  background: linear-gradient(64.7deg, #FC1D1D 0%, #EB4E7D 100%);
+
+}
+
+.footer-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
