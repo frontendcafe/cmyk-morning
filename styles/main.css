@@ -1,5 +1,7 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a:visited {
@@ -12,8 +14,8 @@ a:visited {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  margin: 10px;
-  padding: 10px;
+  margin: 3rem 0.9rem;
+  padding: 1rem 0;
 }
 .banner img {
   min-width: 15rem;
@@ -21,37 +23,42 @@ a:visited {
 .banner__title {
   width: 20rem;
   text-align: center;
+  padding-bottom: 3rem;
 }
 .banner__title--boldText {
   color: #fc541d;
   font-size: 2rem;
 }
 
-.categories {
-  padding-left: 3rem;
+.section__cards {
+  margin: 3rem 0;
+  padding: 1rem 0;
 }
 
-.cardsNavigation {
+.cards__categories {
+  padding-left: 3rem;
+}
+.cards__navigation {
   position: relative;
   display: flex;
   align-items: center;
   margin: 1rem 2rem;
   width: auto;
 }
-.cardsNavigation button {
+.cards__navigation button {
   position: absolute;
   height: 50%;
   background-color: transparent;
   border: 1px solid transparent;
 }
-.cardsNavigation button i {
+.cards__navigation button i {
   font-size: 30px;
   color: rgba(100, 10, 200, 0.3);
 }
-.cardsNavigation .buttonRight {
+.cards__navigation .buttonRight {
   right: -25px;
 }
-.cardsNavigation .buttonLeft {
+.cards__navigation .buttonLeft {
   left: -25px;
 }
 
@@ -59,18 +66,20 @@ a:visited {
   display: flex;
   overflow: hidden;
   scroll-behavior: smooth;
+  align-items: center;
+  height: 11rem;
 }
 
 .card {
   color: #fff;
   letter-spacing: 0.8px;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-  margin: 0 5px 0 0;
+  margin: 0 2px 0 0;
   min-width: 290px;
   max-width: 390px;
   text-align: center;
   border-radius: 5px;
-  height: 11rem;
+  height: 10rem;
   box-shadow: 0px 10px 35px rgba(74, 128, 240, 0.2);
 }
 .card__title {
@@ -84,12 +93,18 @@ a:visited {
 .card:nth-child(2n+1) {
   background: linear-gradient(64.7deg, #fc1d1d 0%, #eb4e7d 100%);
 }
+.card:hover {
+  transform: scale(1.05) translate(0.5rem);
+}
+.card:last-child:hover {
+  transform: scale(1.05) translate(-0.5rem);
+}
 
 .rectangle {
   padding: 0.8rem;
   min-width: 291px;
   max-width: 391px;
-  height: 8.5rem;
+  height: 7.5rem;
   left: 0px;
   top: 0px;
   background: radial-gradient(153.74% 864.67% at 100% 100%, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.42) 91.04%);
@@ -101,18 +116,23 @@ a:visited {
   /* Note: backdrop-filter has minimal browser support */
 }
 
-.elipse {
-  margin-bottom: -4rem;
-  width: 6rem;
-  height: 3rem;
-}
-
 .footer-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem 0;
   font-size: 0.7rem;
+}
+
+@media (min-width: 48em) {
+  .banner {
+    margin: 2rem 1rem 0;
+  }
+
+  .cards__categories {
+    padding: 1rem 3rem;
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -20,10 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
       for (const card of cards) {
         $container.innerHTML += `
       <section class="card">
-      <div class="rectangle">
+        <div class="rectangle">
         <h4 class="card__title">${card.sport}</h4>
         <p "card__location">${card.city}, ${card.country}</p>
-        <img src="/img/elipse.svg" alt="elipse" class="elipse"/>
         </div>
         <div class="footer-card">
           <div class="icons">
@@ -45,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.querySelector(".buttonRight").addEventListener("click", () => {
   if (window.matchMedia("(max-width: 600px)").matches) {
-    $cards.scrollLeft += 317;
+    $cards.scrollLeft += 290;
   } else if (window.matchMedia("(max-width: 900px)").matches) {
     $cards.scrollLeft += 317 * 2;
   } else if (window.matchMedia("(max-width: 1200px)").matches) {

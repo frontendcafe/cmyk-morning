@@ -1,9 +1,9 @@
 $light: #fff;
 
-body {
+* {
   margin: 0;
-  // background: #edc0bf;
-  // background: linear-gradient(0deg, #edc0bf 0, #c4caef 58%);
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a:visited {
@@ -16,8 +16,8 @@ a:visited {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  margin: 10px;
-  padding: 10px;
+  margin: 3rem 0.9rem;
+  padding: 1rem 0;
 
   img {
     min-width: 15rem;
@@ -26,6 +26,7 @@ a:visited {
   &__title {
     width: 20rem;
     text-align: center;
+    padding-bottom: 3rem;
 
     &--boldText {
       color: #fc541d;
@@ -34,35 +35,42 @@ a:visited {
   }
 }
 
-.categories {
-  padding-left: 3rem;
+.section__cards {
+  margin: 3rem 0;
+  padding: 1rem 0;
 }
 
-.cardsNavigation {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin: 1rem 2rem;
-  width: auto;
+.cards {
+  &__categories {
+    padding-left: 3rem;
+  }
 
-  button {
-    position: absolute;
-    height: 50%;
-    background-color: transparent;
-    border: 1px solid transparent;
+  &__navigation {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 1rem 2rem;
+    width: auto;
 
-    i {
-      font-size: 30px;
-      color: rgba(100, 10, 200, 0.3);
+    button {
+      position: absolute;
+      height: 50%;
+      background-color: transparent;
+      border: 1px solid transparent;
+
+      i {
+        font-size: 30px;
+        color: rgba(100, 10, 200, 0.3);
+      }
     }
-  }
 
-  .buttonRight {
-    right: -25px;
-  }
+    .buttonRight {
+      right: -25px;
+    }
 
-  .buttonLeft {
-    left: -25px;
+    .buttonLeft {
+      left: -25px;
+    }
   }
 }
 
@@ -70,6 +78,8 @@ a:visited {
   display: flex;
   overflow: hidden;
   scroll-behavior: smooth;
+  align-items: center;
+  height: 11rem;
 }
 
 @mixin cardText {
@@ -80,12 +90,12 @@ a:visited {
 
 .card {
   @include cardText();
-  margin: 0 5px 0 0;
+  margin: 0 2px 0 0;
   min-width: 290px;
   max-width: 390px;
   text-align: center;
   border-radius: 5px;
-  height: 11rem;
+  height: 10rem;
   box-shadow: 0px 10px 35px rgba(74, 128, 240, 0.2);
 
   &__title {
@@ -102,13 +112,21 @@ a:visited {
   &:nth-child(2n + 1) {
     background: linear-gradient(64.7deg, #fc1d1d 0%, #eb4e7d 100%);
   }
+
+  &:hover {
+    transform: scale(1.05) translate(0.5rem);
+  }
+
+  &:last-child:hover {
+    transform: scale(1.05) translate(-0.5rem);
+  }
 }
 
 .rectangle {
   padding: 0.8rem;
   min-width: 291px;
   max-width: 391px;
-  height: 8.5rem;
+  height: 7.5rem;
   left: 0px;
   top: 0px;
   background: radial-gradient(
@@ -124,16 +142,20 @@ a:visited {
   /* Note: backdrop-filter has minimal browser support */
 }
 
-.elipse {
-  margin-bottom: -4rem;
-  width: 6rem;
-  height: 3rem;
-}
-
 .footer-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem 0;
   font-size: 0.7rem;
+}
+
+@media (min-width: 48em) {
+  .banner {
+    margin: 2rem 1rem 0;
+  }
+  .cards__categories {
+    padding: 1rem 3rem;
+    margin: 0;
+  }
 }
