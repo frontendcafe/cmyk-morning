@@ -3,37 +3,38 @@ body {
 }
 
 h1 {
-  margin: 1rem 0;
+  margin: 0 0;
 }
 
-.aboutUs {
-  margin: 0 20rem;
+.container {
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 75rem;
+  }
+}
+.grid {
+  display: grid;
+}
+
+.AboutUs {
+  background-color: #F6F0FF;
+  border-radius: 1rem;
+  margin: 1.5rem;
+  padding: 2rem;
+}
+.AboutUs span {
+  color: #FC541D;
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 1rem;
-  row-gap: 1rem;
-  margin: 1rem 1rem;
-}
-.cards__card:nth-child(1) {
-  grid-column: 2/3;
-}
-.cards__card:nth-child(2) {
-  grid-column: 1/2;
-}
-.cards__card h3, .cards p {
-  text-align: center;
-  margin: 0.5rem;
-}
-.cards__card .we {
-  text-align: center;
-  font-size: 4rem;
-}
-.cards__icons {
-  text-align: center;
-  font-size: 2rem;
+  background-color: #7D42F5;
+  border-radius: 1rem;
+  max-width: 25rem;
+  height: 15rem;
 }
 
 /*# sourceMappingURL=about.css.map */
