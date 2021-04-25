@@ -2,16 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prueba cards</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
     <script
       src="https://kit.fontawesome.com/625fc00c69.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./styles/normalize.css" />
-    <link rel="stylesheet" href="./styles/global.css" />
   </head>
+
   <body>
     <header class="header">
       <nav class="nav">
@@ -33,24 +35,31 @@
     </header>
 
     <main>
-      <div class="title-img">
-        <h2><span>Find</span> a group to train your favorite sport</h2>
-        <img src="./img/img-index.png" alt="" />
-      </div>
+      <section class="banner">
+        <h2 class="banner__title">
+          <span class="banner__title--boldText">Find</span> a group to train
+          your favourite sport
+        </h2>
+        <img
+          src="https://raw.githubusercontent.com/frontendcafe/cmyk-morning/63727e985e78f98f7e41fca4ac7298ded14ae473/img/img-index.png"
+          alt=""
+        />
+      </section>
+      <section>
+        <h3 class="categories">Categories</h3>
 
-      <h3>Categories</h3>
+        <div class="cardsNavigation">
+          <button class="buttonLeft">
+            <i class="fas fa-chevron-left"></i>
+          </button>
 
-      <div class="cardsNavigation">
-        <button class="buttonLeft">
-          <i class="fas fa-chevron-left"></i>
-        </button>
+          <div id="cards" class="carousel"></div>
 
-        <div id="cards"></div>
-
-        <button class="buttonRight">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-      </div>
+          <button class="buttonRight">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
     </main>
 
     <footer class="footer footer__items">
