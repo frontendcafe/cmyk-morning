@@ -65,7 +65,7 @@
           </div>
         </div>
       </section>
-      <form class="form">
+      <form class="form" name="form">
         <div class="form__container">
           <input type="text" placeholder="Nombre y apellido" name="name" />
           <input type="tel" placeholder="Telefono" name="phoneNumber" />
@@ -93,5 +93,27 @@
           class="footer__image"
       /></a>
     </footer>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCgsS9QNgNtKw_UAaKUpNbI8Tim03fkHtI",
+        authDomain: "morn-meet-training.firebaseapp.com",
+        projectId: "morn-meet-training",
+        storageBucket: "morn-meet-training.appspot.com",
+        messagingSenderId: "271073410817",
+        appId: "1:271073410817:web:07183279cde4bb90ace500",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="./src/form.js"></script>
   </body>
 </html>
