@@ -1,51 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/03cb453b70.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/information.css">
-</head>
+    <script
+      src="https://kit.fontawesome.com/03cb453b70.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/information.css" />
+  </head>
 
-<body>
-    <header></header>
-
-    <section class="section">
-        <div class="section__activity">
-            <div class="section__title">
-                <a href="index.html"></a> <i class="fas fa-caret-left"></i>
-                <h2>Ciclismo grupal</h2>
-            </div>
-
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__title">
+          <img src="./img/morning-icon.png" alt="Morning Icon" />
+          <h3><a href="#">MornMeet Training</a></h3>
         </div>
-        <img class="section__activity-image" src="https://images.unsplash.com/photo-1534787238916-9ba6764efd4f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3ljbGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=60" alt="">
+        <div class="nav__aboutUs">
+          <h3><a href="#">About Us</a></h3>
+        </div>
+        <div class="nav__hamburguer">
+          <button class="hamburguer">
+            <span class="hamburuger__topLine"></span>
+            <span class="hamburuger__middleLine"></span>
+            <span class="hamburguer__bottomLine"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section__title">
+          <a href="index.html"></a> <i class="fas fa-caret-left"></i>
+          <h2>Ciclismo grupal</h2>
+        </div>
+        <img
+          class="section__image"
+          src="https://images.unsplash.com/photo-1534787238916-9ba6764efd4f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3ljbGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          alt=""
+        />
 
         <div class="section__data">
-            <div class="section__info">
-                <div class="section__info-location"><i class="fas fa-map-marker-alt"></i>
-                    <p>Cordoba, Argentina</p>
-                </div>
-                <div class="section__info-text">
-                    <p>10 de mayo de 2021</p>
-                    <p class="section__info-price">Gratis</p>
-                    <p>10 personas inscriptas</p>
-                </div>
+          <div class="section__info">
+            <div class="section__location">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>Cordoba, Argentina</p>
             </div>
-            <div class="section__data_icons">
-                <i class="fas fa-heart"></i>
-
-                <i class="fas fa-users"></i>
+            <div class="section__description">
+              <p>10 de mayo de 2021</p>
+              <p class="section__price">Gratis</p>
+              <p>10 personas inscriptas</p>
             </div>
+          </div>
+          <div class="section__icons">
+            <i class="fas fa-heart"></i>
 
-
+            <i class="fas fa-users"></i>
+          </div>
         </div>
+      </section>
+      <form class="form" name="form">
+        <div class="form__container">
+          <input type="text" placeholder="Nombre y apellido" name="name" />
+          <input type="tel" placeholder="Telefono" name="phoneNumber" />
 
-    </section>
+          <input type="submit" value="Registrarse" class="form__buttom" />
+        </div>
+      </form>
+    </main>
+
+    <footer class="footer footer__items">
+      <span class="footer__text">Made by team</span>
+      <a href=""
+        ><img
+          src="./img/morning-icon.png"
+          alt="morning"
+          srcset=""
+          class="footer__image"
+      /></a>
+      <span class="footer__text">CMYK 3 by</span>
+      <a href="https://frontend.cafe/" target="_blank"
+        ><img
+          src="./img/frontendcafe-icon.png"
+          alt="frontcafe"
+          srcset=""
+          class="footer__image"
+      /></a>
+    </footer>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
 
 
-</body>
-
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCgsS9QNgNtKw_UAaKUpNbI8Tim03fkHtI",
+        authDomain: "morn-meet-training.firebaseapp.com",
+        projectId: "morn-meet-training",
+        storageBucket: "morn-meet-training.appspot.com",
+        messagingSenderId: "271073410817",
+        appId: "1:271073410817:web:07183279cde4bb90ace500",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="./src/form.js"></script>
+  </body>
 </html>
