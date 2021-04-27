@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    const title = document.getElementById("section__title-activity");
+    const title = document.querySelector(".section__title-activity");
 
     //Activity
     title.innerHTML += actividad.sport
 
     //Activity image
-    const mainImage = document.querySelector(".section__activity-image");
+    const mainImage = document.querySelector(".section__image");
     mainImage.src = actividad.picture
 
     //Place
@@ -24,15 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
     site.innerHTML = `${actividad.city}, ${actividad.country}`
 
     //Date
-    const calendarDay = document.getElementById("date")
+    const calendarDay = document.querySelector(".section__date")
     calendarDay.innerHTML = actividad.date
+    
 
     //Activity price
-    const price = document.querySelector(".section__info-price")
+    const price = document.querySelector(".section__price")
     price.innerHTML = actividad.cost
-
+    
     //Registered people
-    const signedUp = document.getElementById("registered-people")
+    const signedUp = document.querySelector(".section__registered-people")
     const signedupValue = actividad.enrolled
     signedUp.innerHTML = `${signedupValue}   people registred`
 
