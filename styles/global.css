@@ -36,6 +36,24 @@ body {
   margin: 0 0.5em;
 }
 
+.mobileMenu img {
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+.navegacion {
+  display: none;
+}
+
+.mostrar {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .mobileMenu {
+    display: none;
+  }
+}
 .hamburguer {
   background: transparent;
   cursor: pointer;
