@@ -6,7 +6,7 @@ let sport = 'cycling-individual';
 
 const addParticipant = (sport, name, phone) => {
   db.collection('sports').doc(`${sport}`).collection('participants').add({
-    name,
+   name,
     phone,
   });
   db.collection('sports').doc(`${sport}`).update({ enrolled: increment });
