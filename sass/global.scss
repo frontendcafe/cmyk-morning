@@ -14,8 +14,8 @@ body {
 }
 
 .header {
-  width: 100%; 
-  height: 8%;
+  background-color: $header;
+  width: 100%;  
 
   a {
     text-decoration: none;
@@ -24,54 +24,50 @@ body {
 }
 
 .nav {
-  background-color: $header;  
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  padding: .5rem;
 
   &__title {
-    display: flex;
-    align-items: center;
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;    
   }
-
-  &__title img {
-    margin: 0 0.5em;
-  }
-}
-
-// MenuMobile
-.mobileMenu {
-  display: block;
-  margin: auto 0;
-  text-align: right;
-   img {
-    width: 2rem;  
-    margin-right: 1rem; 
-  }
-}
-.navegacion {
-  display: none;
-  grid-column: 1 / 3;
-  text-align: center;  
-  // visibility: hidden;
-  // opacity: 0;
-  // transition: visibility .3s ease-in-out, opacity 0.5s linear;
-}
-.mostrar {
-  display: block; 
-  // visibility: visible;
-  // opacity: 1; 
-}
-@media (min-width: 768px) {
-  .mobileMenu {
-    display: none;  
-  }
-  .navegacion {
+  &__mobileMenu {
     display: block;
-    grid-column: auto;
-    text-align: right;
-    // visibility: visible;   
-    // opacity: 1; 
+    img {
+      width: 2rem;
+    }
   }
+  &__title img {
+    margin: 0 0.5rem;
+  }
+  &__link {
+    display: none;    
+  }
+}
+
+.show {
+  display: block;
+  padding: .5rem 0;  
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: flex;  
+    padding: 1rem 6rem;      
+    justify-content: space-between;
+    align-items: center;       
+
+    &__title img {
+      margin-right: 1rem;
+    }
+    &__mobileMenu {
+      display: none;
+    }
+    &__link {
+      display: block;      
+    }
+  }  
 }
 
 main {
@@ -95,15 +91,5 @@ main {
 
   &__text {
     padding: 0 15px;
-  }
-}
-
-@media screen and (min-width: 48rem) {
-  .nav {
-    padding: 1em 6em;
-
-    &__title img {
-      margin-right: 1em;
-    }
   }
 }

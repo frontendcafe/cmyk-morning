@@ -77,17 +77,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function eventListeners() {
-  const mobileMenu = document.querySelector('.mobileMenu');
+  const mobileMenu = document.querySelector('.nav__mobileMenu');
 
   mobileMenu.addEventListener('click', navegacionResponsive);
 }
 
 function navegacionResponsive() {
-  const navegacion = document.querySelector('.navegacion');
+  const navegacion = document.querySelector('.nav__link');
 
-  if (navegacion.classList.contains('mostrar')) {
-    navegacion.classList.remove('mostrar');
+  if (navegacion.classList.contains('show')) {
+    navegacion.classList.remove('show');
   } else {
-    navegacion.classList.add('mostrar');
+    navegacion.classList.add('show');
   }
 }
