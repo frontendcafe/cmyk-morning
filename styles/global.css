@@ -11,6 +11,7 @@ body {
 
 .header {
   width: 100%;
+  height: 8%;
 }
 .header a {
   text-decoration: none;
@@ -19,41 +20,35 @@ body {
 
 .nav {
   background-color: #a1e5f4;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .nav__title {
   display: flex;
-  align-items: baseline;
-}
-.nav__aboutUs {
-  display: none;
+  align-items: center;
 }
 .nav__title img {
   margin: 0 0.5em;
 }
 
-@media (min-width: 768px) {
-  .nav {
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-between;
-  }
+.mobileMenu {
+  display: block;
+  margin: auto 0;
+  text-align: right;
 }
 .mobileMenu img {
   width: 2rem;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
 .navegacion {
   display: none;
+  grid-column: 1/3;
+  text-align: center;
 }
 
 .mostrar {
   display: block;
-  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 768px) {
@@ -63,6 +58,8 @@ body {
 
   .navegacion {
     display: block;
+    grid-column: auto;
+    text-align: right;
   }
 }
 main {
