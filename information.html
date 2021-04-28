@@ -38,29 +38,24 @@
       <section class="section">
         <div class="section__title">
           <a href="index.html"></a> <i class="fas fa-caret-left"></i>
-          <h2>Ciclismo grupal</h2>
+          <h2 class="section__title-activity"></h2>
         </div>
-        <img
-          class="section__image"
-          src="https://images.unsplash.com/photo-1534787238916-9ba6764efd4f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3ljbGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-          alt=""
-        />
+        <img class="section__image" src="" alt="training photos" />
 
         <div class="section__data">
           <div class="section__info">
             <div class="section__location">
               <i class="fas fa-map-marker-alt"></i>
-              <p>Cordoba, Argentina</p>
+              <p class="section__data-locality"></p>
             </div>
             <div class="section__description">
-              <p>10 de mayo de 2021</p>
-              <p class="section__price">Gratis</p>
-              <p>10 personas inscriptas</p>
+              <p class="section__date"></p>
+              <p class="section__price"></p>
+              <p class="section__registered-people"></p>
             </div>
           </div>
           <div class="section__icons">
             <i class="fas fa-heart"></i>
-
             <i class="fas fa-users"></i>
           </div>
         </div>
@@ -70,6 +65,7 @@
           <input type="text" placeholder="Nombre y apellido" name="name" />
           <input type="tel" placeholder="Telefono" name="phoneNumber" />
           <input type="email" placeholder="Email" name="email" />
+
           <input type="submit" value="Registrarse" class="form__buttom" />
         </div>
       </form>
@@ -100,20 +96,21 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
 
-
     <script>
       // Your web app's Firebase configuration
       var firebaseConfig = {
-        apiKey: "AIzaSyCgsS9QNgNtKw_UAaKUpNbI8Tim03fkHtI",
-        authDomain: "morn-meet-training.firebaseapp.com",
-        projectId: "morn-meet-training",
-        storageBucket: "morn-meet-training.appspot.com",
-        messagingSenderId: "271073410817",
-        appId: "1:271073410817:web:07183279cde4bb90ace500",
+        apiKey: 'AIzaSyCgsS9QNgNtKw_UAaKUpNbI8Tim03fkHtI',
+        authDomain: 'morn-meet-training.firebaseapp.com',
+        projectId: 'morn-meet-training',
+        storageBucket: 'morn-meet-training.appspot.com',
+        messagingSenderId: '271073410817',
+        appId: '1:271073410817:web:07183279cde4bb90ace500',
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
     </script>
+    <script src="sportsData.js"></script>
+    <script src="information.js"></script>
     <script src="./src/form.js"></script>
   </body>
 </html>
