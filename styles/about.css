@@ -9,6 +9,7 @@ h1 {
 .container {
   max-width: 95%;
   margin: 0 auto;
+  margin-top: 5rem;
   padding: 1rem;
 }
 
