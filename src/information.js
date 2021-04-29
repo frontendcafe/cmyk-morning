@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	  const signedUp = document.querySelector(".section__registered-people");
 	  const signedupValue = actividad.enrolled;
 	  signedUp.innerHTML = `${signedupValue}   people registred`;
+
+	  document.querySelector(".form").setAttribute("id", doc.id)
 	}
 	});
     });
