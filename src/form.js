@@ -6,7 +6,7 @@ let sport = 'cycling-individual'; //To do: hacer que esta variable deporte vaya 
 
 const addParticipant = (sport, name, phone, email) => {
   db.collection('sports').doc(`${sport}`).collection('participants').add({
-    name,
+   name,
     phone,
     email,
     enrolled: new Date(),
