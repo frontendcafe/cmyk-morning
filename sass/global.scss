@@ -16,6 +16,8 @@ body {
 .header {
   width: 100%;
   height: 8%;
+  position: sticky; /* fix the position of the header  */
+  top: 0;
 
   a {
     text-decoration: none;
