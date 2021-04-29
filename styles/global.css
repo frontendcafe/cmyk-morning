@@ -30,7 +30,7 @@ body {
   align-items: center;
 }
 .nav__title--effect {
-  transition: all 0.2s;
+  transition: all 0.5s;
   animation: effect 2s linear;
 }
 .nav__title--effect:hover {
@@ -49,7 +49,7 @@ body {
   display: none;
 }
 .nav__link h3 a {
-  transition: all 0.2s;
+  transition: all 0.5s;
 }
 .nav__link h3 a:hover {
   display: block;
