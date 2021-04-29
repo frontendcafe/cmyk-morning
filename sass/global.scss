@@ -68,10 +68,19 @@ body {
 
 @keyframes effect {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-75%);
+  }
+  25% {
+    transform: translateX(-50%);
   }
   50% {
+    transform: translateX(-25%);
+  }
+  75% {
     transform: translateX(15%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
 
@@ -107,18 +116,18 @@ body {
     }
   }
 
-  @keyframes effect {
+  @keyframes effect {   
     0% {
       transform: translateX(-100%);
     }
     25% {
-      transform: translateX(-25%);
+      transform: translateX(-75%);
     }
     50% {
-      transform: translateX(30%);
+      transform: translateX(-50%);
     }
     75% {
-      transform: translateX(15%);
+      transform: translateX(-25%);
     }
     100% {
       transform: translateX(0%);
