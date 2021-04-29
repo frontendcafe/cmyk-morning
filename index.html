@@ -17,20 +17,23 @@
   <body>
     <header class="header">
       <nav class="nav">
-	<div class="nav__title">
-	  <img src="./img/morning-icon.png" alt="Morning Icon" />
-	  <h3><a href="#">MornMeet Training</a></h3>
-	</div>
-	<div class="nav__aboutUs">
-	  <h3><a href="#">About Us</a></h3>
-	</div>
-	<div class="nav__hamburguer">
-	  <button class="hamburguer">
-	    <span class="hamburuger__topLine"></span>
-	    <span class="hamburuger__middleLine"></span>
-	    <span class="hamburguer__bottomLine"></span>
-	  </button>
-	</div>
+        <div class="nav__title">
+          <h3 class="nav__title--effect">
+            <a href="index.html"
+              ><img src="./img/morning-icon.png" alt="Morning Icon" /> MornMeet
+              Training</a
+            >
+          </h3>
+
+          <div class="nav__mobileMenu">
+            <img src="./img/barras.svg" alt="icon menu responsive" />
+          </div>
+        </div>
+
+        <div class="nav__link">
+          <h3><a href="https://frontend.cafe/">Frontend Cafe</a></h3>
+          <h3><a href="about.html">About Us</a></h3>
+        </div>
       </nav>
     </header>
 
@@ -78,6 +81,7 @@
 
       </a>
     </footer>
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
 
@@ -100,5 +104,7 @@
         firebase.initializeApp(firebaseConfig);
       </script>
       <script src="./src/app.js"></script>
+      <script src="./src/mobileMenu.js"></script>
+
   </body>
 </html>
