@@ -25,17 +25,17 @@ const addParticipant = (sport, name, phone, email) => {
 
 $form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const sport = identifySport();
+  const sport = $form.id;
   const name = $form.name;
   const phone = $form.phoneNumber;
   const email = $form.email;
+  console.log(sport);
   const response = await addParticipant(
     sport,
     name.value,
     phone.value,
     email.value
   );
-  $form.reset();
 });
 
 const incrementEnrolled = (sport) => {
@@ -50,5 +50,9 @@ const identifySport = () => {
 };
 
 const succesAlert = (name) => {
-  Swal.fire("Done " + name + "!", "Registration succesfull", "success");
+  Swal.fire("Done " + name + "!", "Registration succesfull", "success").then(
+    (isConfirm) => {
+      location.reload();
+    }
+  );
 };
