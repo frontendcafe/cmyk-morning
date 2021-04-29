@@ -11,7 +11,7 @@
     <script
       src="https://kit.fontawesome.com/625fc00c69.js"
       crossorigin="anonymous"
-    ></script>
+      ></script>
   </head>
 
   <body>
@@ -39,51 +39,72 @@
 
     <main>
       <section class="banner">
-        <h2 class="banner__title">
-          <span class="banner__title--boldText">Find</span> a group to train
-          your favourite sport
-        </h2>
-        <img
-          src="https://raw.githubusercontent.com/frontendcafe/cmyk-morning/63727e985e78f98f7e41fca4ac7298ded14ae473/img/img-index.png"
-          alt=""
-        />
+	<h2 class="banner__title">
+	  <span class="banner__title--boldText">Find</span> a group to train
+	  your favourite sport
+	</h2>
+	<img
+	  src="https://raw.githubusercontent.com/frontendcafe/cmyk-morning/63727e985e78f98f7e41fca4ac7298ded14ae473/img/img-index.png"
+	  alt=""
+	  />
       </section>
       <section class="section__cards">
-        <h3 class="cards__categories">Categories</h3>
+	<h3 class="cards__categories">Categories</h3>
 
-        <div class="cards__navigation">
-          <button class="buttonLeft">
-            <i class="fas fa-chevron-left"></i>
-          </button>
+	<div class="cards__navigation">
+	  <button class="buttonLeft">
+	    <i class="fas fa-chevron-left"></i>
+	  </button>
 
-          <div id="cards" class="carousel"></div>
+	  <div id="cards" class="carousel"></div>
 
-          <button class="buttonRight">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </div>
+	  <button class="buttonRight">
+	    <i class="fas fa-chevron-right"></i>
+	  </button>
+	</div>
       </section>
     </main>
 
     <footer class="footer footer__items">
       <span class="footer__text">Made by team</span>
       <a href=""
-        ><img
-          src="./img/morning-icon.png"
-          alt="morning"
-          srcset=""
-          class="footer__image"
-      /></a>
+	 ><img
+	    src="./img/morning-icon.png"
+	    alt="morning"
+	    srcset=""
+	    class="footer__image"
+	    /></a>
       <span class="footer__text">CMYK 3 by</span>
-      <a href="https://frontend.cafe/" target="_blank"
-        ><img
-          src="./img/frontendcafe-icon.png"
-          alt="frontcafe"
-          srcset=""
-          class="footer__image"
-      /></a>
+      <a href="https://frontend.cafe/" target="_blank">
+
+	<img src="./img/frontendcafe-icon.png" alt="frontcafe" srcset="" class="footer__image" />
+
+      </a>
     </footer>
-    <script src="./src/app.js"></script>
-    <script src="./src/mobileMenu.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+
+
+      <script>
+	// Your web app's Firebase configuration
+	let firebaseConfig = {
+	  apiKey: "AIzaSyCgsS9QNgNtKw_UAaKUpNbI8Tim03fkHtI",
+	  authDomain: "morn-meet-training.firebaseapp.com",
+	  projectId: "morn-meet-training",
+	  storageBucket: "morn-meet-training.appspot.com",
+	  messagingSenderId: "271073410817",
+	  appId: "1:271073410817:web:07183279cde4bb90ace500",
+	};
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+      <script src="./src/app.js"></script>
+      <script src="./src/mobileMenu.js"></script>
+
   </body>
 </html>

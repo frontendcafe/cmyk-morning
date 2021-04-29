@@ -3,41 +3,32 @@ const $card = document.querySelector(".card");
 
 // ----------------- Data of the JSON in the cards -------------------------
 
-document.addEventListener("DOMContentLoaded", () => {
-  const http = new XMLHttpRequest();
-  const $container = document.querySelector("#cards");
+db = firebase.firestore();
 
-  http.open("GET", "./sportsData.json", true);
+db.collection("sports").get().then((querySnapshot) => {
+  querySnapshot.forEach((doc) => {
+    let card = doc.data();
 
-  http.send();
-
-  http.onreadystatechange = () => {
-    if (http.readyState === 4 && http.status === 200) {
-      const cards = JSON.parse(http.responseText);
-
-      $container.innerHTML = "";
-
-      for (const card of cards) {
-        $container.innerHTML += `
-      <section class="card">
-        <div class="rectangle">
-        <h4 class="card__title">${card.sport}</h4>
-        <p "card__location">${card.city}, ${card.country}</p>
-        </div>
-        <div class="footer-card">
-          <div class="icons">
-            <i class="fas fa-heart"></i>
-          </div>
-        <p>
-            <i class="fas fa-users"></i> ${card.enrolled} personas inscritas</p>
-        <p>${card.cost}</p>
-        </div> 
-      </section>
-      
-      `;
-      }
-    }
-  };
+    $cards.innerHTML += `
+	  <a href="../information.html?id=${card.id}">
+	    <section class="card">
+	      <div class="rectangle">
+	      <h4 class="card__title">${card.sport}</h4>
+	      <p "card__location">${card.city}, ${card.country}</p>
+	      </div>
+	      <div class="footer-card">
+		<div class="icons">
+		  <i class="fas fa-heart"></i>
+		</div>
+	      <p>
+		<i class="fas fa-users"></i> ${card.enrolled} personas inscritas</p>
+	      <p>${card.cost}</p>
+	      </div> 
+	    </section>
+	  </a>
+	  
+	  `;
+  });
 });
 
 // ------------------------- Scroll of the cards --------------------------------------

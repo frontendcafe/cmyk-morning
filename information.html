@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <script src="https://kit.fontawesome.com/03cb453b70.js" crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <link rel="stylesheet" href="./styles/normalize.css" />
   <link rel="stylesheet" href="./styles/global.css" />
   <link rel="stylesheet" href="./styles/information.css" />
@@ -38,52 +39,65 @@
   <main>
     <section class="section">
       <div class="section__title">
-        <a href="index.html"></a> <i class="fas fa-caret-left"></i>
+        <a href="index.html"><i class="fas fa-caret-left"></i></a>
         <h2 class="section__title-activity"></h2>
       </div>
       </div>
       <img class="section__image" src="" alt="training photos" />
 
-      <div class="section__data">
-        <div class="section__info">
-          <div class="section__location">
-            <i class="fas fa-map-marker-alt"></i>
-            <p class="section__data-locality"></p>
+        <div class="section__data">
+          <div class="section__info">
+            <div class="section__location">
+              <i class="fas fa-map-marker-alt"></i>
+              <p class="section__data-locality"></p>
+            </div>
+            <div class="section__description">
+              <p class="section__date"></p>
+              <p class="section__price"></p>
+              <p class="section__registered-people"></p>
+            </div>
           </div>
-          <div class="section__description">
-            <p class="section__date"></p>
-            <p class="section__price"></p>
-            <p class="section__registered-people"></p>
+          <div class="section__icons">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-users"></i>
           </div>
         </div>
-        <div class="section__icons">
-          <i class="fas fa-heart"></i>
-          <i class="fas fa-users"></i>
+      </section>
+      <form class="form" name="form">
+        <div class="form__container">
+          <input type="text" placeholder="Nombre y apellido" name="name" />
+          <input type="tel" placeholder="Telefono" name="phoneNumber" />
+          <input type="email" placeholder="Email" name="email" />
+
+          <input type="submit" value="Registrarse" class="form__buttom" />
         </div>
-      </div>
-    </section>
-    <form class="form" name="form">
-      <div class="form__container">
-        <input type="text" placeholder="Nombre y apellido" name="name" />
-        <input type="tel" placeholder="Telefono" name="phoneNumber" />
+      </form>
+    </main>
 
-        <input type="submit" value="Registrarse" class="form__buttom" />
-      </div>
-    </form>
-  </main>
+    <footer class="footer footer__items">
+      <span class="footer__text">Made by team</span>
+      <a href=""
+        ><img
+          src="./img/morning-icon.png"
+          alt="morning"
+          srcset=""
+          class="footer__image"
+      /></a>
+      <span class="footer__text">CMYK 3 by</span>
+      <a href="https://frontend.cafe/" target="_blank"
+        ><img
+          src="./img/frontendcafe-icon.png"
+          alt="frontcafe"
+          srcset=""
+          class="footer__image"
+      /></a>
+    </footer>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
 
-  <footer class="footer footer__items">
-    <span class="footer__text">Made by team</span>
-    <a href=""><img src="./img/morning-icon.png" alt="morning" srcset="" class="footer__image" /></a>
-    <span class="footer__text">CMYK 3 by</span>
-    <a href="https://frontend.cafe/" target="_blank"><img src="./img/frontendcafe-icon.png" alt="frontcafe" srcset=""
-        class="footer__image" /></a>
-  </footer>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
+    
   <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
 
 
@@ -100,8 +114,7 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
   </script>
-  <script src="sportsData.js"></script>
-  <script src="information.js"></script>
+  <script src="./src/information.js"></script>
   <script src="./src/form.js"></script>
   <script src="./src/mobileMenu.js"></script>
 </body>
