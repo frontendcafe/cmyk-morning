@@ -11,7 +11,7 @@ db.collection("sports").get().then((querySnapshot) => {
 
     $cards.innerHTML += `
 	  <a href="../information.html?id=${card.id}">
-	    <section class="card">
+	    <section class="card" id="${card.index}">
 	      <div class="rectangle">
 	      <h4 class="card__title">${card.sport}</h4>
 	      <p "card__location">${card.city}, ${card.country}</p>
