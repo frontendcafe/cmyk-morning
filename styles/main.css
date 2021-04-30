@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -11,31 +10,21 @@ a:visited {
 }
 
 .banner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   margin: 3rem 0.9rem;
   padding: 1rem 0;
 }
-
 .banner img {
   min-width: 15rem;
 }
-
 .banner__title {
   width: 20rem;
   text-align: center;
   padding-bottom: 3rem;
 }
-
 .banner__title--boldText {
   color: #CF4834;
   font-size: 2rem;
@@ -49,47 +38,34 @@ a:visited {
 .cards__categories {
   padding-left: 3rem;
 }
-
 .cards__navigation {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   margin: 1rem 2rem;
   width: auto;
 }
-
 .cards__navigation button {
   position: absolute;
   height: 50%;
   background-color: transparent;
   border: 1px solid transparent;
 }
-
 .cards__navigation button i {
   font-size: 30px;
   color: rgba(100, 10, 200, 0.3);
 }
-
 .cards__navigation .buttonRight {
   right: -25px;
 }
-
 .cards__navigation .buttonLeft {
   left: -25px;
 }
 
 .carousel {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
   scroll-behavior: smooth;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   height: 11rem;
 }
@@ -104,33 +80,25 @@ a:visited {
   text-align: center;
   border-radius: 15px;
   height: 10rem;
-  -webkit-box-shadow: 0px 10px 35px rgba(74, 128, 240, 0.2);
   box-shadow: 0px 10px 35px rgba(74, 128, 240, 0.2);
 }
-
 .card__title {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.3rem;
   padding-bottom: 0.3rem;
 }
-
 .card:nth-child(2n) {
   background: url("../img/blue-card-bg.png");
   background-position: center;
 }
-
 .card:nth-child(2n+1) {
   background-image: url("../img/red-card-bg.svg");
   background-position: center;
 }
-
 .card:hover {
-  -webkit-transform: scale(1.05) translate(0.5rem);
   transform: scale(1.05) translate(0.5rem);
 }
-
 .card:last-child:hover {
-  -webkit-transform: scale(1.05) translate(-0.5rem);
   transform: scale(1.05) translate(-0.5rem);
 }
 
@@ -145,22 +113,14 @@ a:visited {
   background-blend-mode: overlay;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 15px 15px 0 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   /* Note: backdrop-filter has minimal browser support */
 }
 
 .footer-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   padding: 0.5rem 1rem 0;
   font-size: 0.7rem;
@@ -176,6 +136,5 @@ a:visited {
     margin: 0;
   }
 }
-/*# sourceMappingURL=main.css.map */
 
 /*# sourceMappingURL=main.css.map */
