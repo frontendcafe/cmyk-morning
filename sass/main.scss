@@ -106,16 +106,16 @@ a:visited {
     padding-bottom: 0.3rem;
   }
 
-  &:nth-child(2n) {
+  &:nth-child(2n + 1) {
     background: url('../img/blue-card-bg.png');
     background-position: center;
   }
 
-  &:nth-child(2n + 1) {
+  &:nth-child(2n) {
     background-image: url("../img/red-card-bg.svg");
     background-position: center;
   }
-
+  
   &:hover {
     transform: scale(1.05) translate(0.5rem);
   }
