@@ -1,6 +1,7 @@
 const db = firebase.firestore();
 const $form = document.form;
 const $sendBtn = document.querySelector("#send-form");
+
 const increment = firebase.firestore.FieldValue.increment(1);
 
 const addParticipant = (sport, name, phone, email) => {
@@ -21,23 +22,27 @@ const addParticipant = (sport, name, phone, email) => {
       console.error("Error writing document: ", error);
     });
   incrementEnrolled(sport);
-};
+}
 
-$form.addEventListener("submit", async (e) => {
+
+$form.addEventListener("submit", (e) => {
   e.preventDefault();
+  validateForm()
+  
+});
+
+const sendForm = async (e) => {
   const sport = $form.id;
   const name = $form.name;
   const phone = $form.phoneNumber;
   const email = $form.email;
-  console.log(sport);
   const response = await addParticipant(
     sport,
     name.value,
     phone.value,
     email.value
   );
-});
-
+}
 const incrementEnrolled = (sport) => {
   db.collection("sports").doc(`${sport}`).update({ enrolled: increment });
 };
@@ -56,3 +61,4 @@ const succesAlert = (name) => {
     }
   );
 };
+
