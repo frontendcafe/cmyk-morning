@@ -8,8 +8,7 @@ h1 {
 
 .container {
   max-width: 95%;
-  margin: 0 auto;
-  margin-top: 5rem;
+  margin: 1rem auto;
   padding: 1rem;
 }
 
@@ -24,13 +23,13 @@ h1 {
 }
 
 .AboutUs {
-  background-color: #F6F0FF;
+  background-color: #f6f0ff;
   border-radius: 1rem;
   padding: 2rem;
   box-shadow: 2px 2px 8px;
 }
 .AboutUs span {
-  color: #FC541D;
+  color: #fc541d;
 }
 
 @media (min-width: 768px) {
