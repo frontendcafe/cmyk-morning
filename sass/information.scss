@@ -136,6 +136,9 @@ main {
 
   &__container {
     margin: 3rem 1rem;
+    .input-container{
+      margin-bottom: 2rem;
+    }
   }
 
   input:not([type="submit"]) {
@@ -143,13 +146,17 @@ main {
     color: $light;
     padding: 1rem;
     width: 95%;
-    margin-bottom: 2rem;
     border: none;
     border-radius: 0.5rem;
   }
 
   #error{
     border: 2px solid #f00;
+  }
+
+  #succes{
+    border: 2px solid #080;
+
   }
 
   &__buttom {
@@ -174,21 +181,12 @@ main {
     background-color: $dark;
   }
 
-  .errors-container{
-    background-color: red;
+  .error-info{
+    list-style: none;
+    color: #f00;
     width: 95%;
-    padding: 1em;
-    border-radius: 0.5em;
-    margin: 0em 0em 2em;
-    li{
-      margin-bottom: 1em;
-      list-style: none;
-    }
+    padding: .3em;
   }
-}
-
-.hidden{
-  display: none;
 }
 
 @media (min-width: 768px) {
