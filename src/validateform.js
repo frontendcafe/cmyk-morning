@@ -1,10 +1,10 @@
 function validateName(name) {
   if (name.length === 0) {
-    return "This field should have at least one character";
+    return "Your name should have at least one character";
   } else if (name.length >= 20) {
-    return "This field should have less than 50 characters";
+    return "Your name should have less than 50 characters";
   } else if (!/^[a-z]+$/i.test(name)) {
-    return "This field can only contain numbers and letters";
+    return "Your name can only contain letters";
   }
   return "";
 }
@@ -24,6 +24,7 @@ function validateMail(mail) {
 }
 
 function validateForm() {
+  removeError()
   const name = $form.name.value;
   const phoneNumber = $form.phoneNumber.value;
   const mail = $form.email.value;
@@ -38,10 +39,12 @@ function validateForm() {
   };
   const success = handleErrors(errors) === 0;
   if (success) {
+    errorsContainer.classList.add('hidden')
     sendForm();
     console.log("sending");
   }
 }
+const errorsContainer = document.querySelector('.errors-container')
 
 function handleErrors(errors) {
   let errorsAmount = 0;
@@ -50,8 +53,30 @@ function handleErrors(errors) {
     const error = errors[key];
     if (error) {
       errorsAmount++;
-      $form[key].className = "error";
+      
+      $form[key].id = "error";
+      createError(error)
+    }
+    else{
+      $form[key].id = ''
+      
     }
   });
   return errorsAmount;
+}
+
+function createError(error) {
+  errorsContainer.classList.remove('hidden')
+  const errorsUl = document.querySelector('.errors-container__ul')
+  const newLi = document.createElement('li')
+  newLi.className = 'new-li'
+  newLi.innerText = error
+  errorsUl.appendChild(newLi)
+}
+
+function removeError() {
+  const liNode = document.querySelectorAll('.new-li')
+  liNode.forEach(li => {
+    li.remove()
+  });
 }

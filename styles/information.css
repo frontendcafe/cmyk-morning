@@ -120,6 +120,9 @@ main {
   border: none;
   border-radius: 0.5rem;
 }
+.form #error {
+  border: 2px solid #f00;
+}
 .form__buttom {
   background-color: #9d9d9d;
   padding: 1.5rem;
@@ -137,6 +140,21 @@ main {
 .form__buttom:hover {
   cursor: pointer;
   background-color: #000;
+}
+.form .errors-container {
+  background-color: red;
+  width: 95%;
+  padding: 1em;
+  border-radius: 0.5em;
+  margin: 0em 0em 2em;
+}
+.form .errors-container li {
+  margin-bottom: 1em;
+  list-style: none;
+}
+
+.hidden {
+  display: none;
 }
 
 @media (min-width: 768px) {
