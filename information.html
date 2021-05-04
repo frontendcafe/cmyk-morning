@@ -65,10 +65,19 @@
       </section>
       <form class="form" name="form">
         <div class="form__container">
+          <div id="name" class="input-container">
           <input type="text" placeholder="Nombre y apellido" name="name" />
+        </div>
+        <div id="phoneNumber" class="input-container">
           <input type="tel" placeholder="Telefono" name="phoneNumber" />
+        </div>
+        <div id="email" class="input-container">
           <input type="email" placeholder="Email" name="email" />
-
+        </div>
+          <div class="errors-container hidden">
+            <ul class="errors-container__ul">
+            </ul>
+          </div>
           <input type="submit" value="Registrarse" class="form__buttom" />
         </div>
       </form>

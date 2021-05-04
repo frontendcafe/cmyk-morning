@@ -1,10 +1,10 @@
 function validateName(name) {
   if (name.length === 0) {
-    return "This field should have at least one character";
-  } else if (name.length >= 20) {
-    return "This field should have less than 50 characters";
-  } else if (!/^[a-z]+$/i.test(name)) {
-    return "This field can only contain numbers and letters";
+    return "Your name should have at least one character";
+  } else if (name.length >= 50) {
+    return "Your name should have less than 50 characters";
+  } else if (!/^[a-z]+\s[a-z]+$/i.test(name)) {
+    return "Please enter your name and your last name";
   }
   return "";
 }
@@ -24,6 +24,7 @@ function validateMail(mail) {
 }
 
 function validateForm() {
+  removeError()
   const name = $form.name.value;
   const phoneNumber = $form.phoneNumber.value;
   const mail = $form.email.value;
@@ -38,6 +39,7 @@ function validateForm() {
   };
   const success = handleErrors(errors) === 0;
   if (success) {
+    errorsContainer.classList.add('hidden')
     sendForm();
     console.log("sending");
   }
@@ -48,10 +50,31 @@ function handleErrors(errors) {
   const keys = Object.keys(errors);
   keys.forEach((key) => {
     const error = errors[key];
+    const $error = '#'+key
     if (error) {
       errorsAmount++;
-      $form[key].className = "error";
+      $form[key].id = "error";
+      createError($error, error)
+    }
+    else{
+      $form[key].id = 'succes' 
     }
   });
   return errorsAmount;
+}
+
+function createError($error, error) {
+  const errorContainer = document.querySelector($error)
+  const newP = document.createElement('p')
+  newP.className = 'error-info'
+  newP.innerText = error
+  // newP.style.fontWeight = 'bold'
+  errorContainer.appendChild(newP)
+}
+
+function removeError() {
+  const errorsNode = document.querySelectorAll('.error-info')
+  errorsNode.forEach(error => {
+    error.remove()
+  });
 }
