@@ -167,6 +167,9 @@ main {
 
   &__container {
     margin: 3rem 1rem;
+    .input-container{
+      margin-bottom: 2rem;
+    }
   }
 
   input:not([type='submit']) {
@@ -174,9 +177,17 @@ main {
     color: $light;
     padding: 1rem;
     width: 95%;
-    margin-bottom: 2rem;
     border: none;
     border-radius: 0.5rem;
+  }
+
+  #error{
+    border: 2px solid #f00;
+  }
+
+  #succes{
+    border: 2px solid #080;
+
   }
 
   &__buttom {
@@ -199,6 +210,13 @@ main {
   &__buttom:hover {
     cursor: pointer;
     background-color: $dark;
+  }
+
+  .error-info{
+    list-style: none;
+    color: #f00;
+    width: 95%;
+    padding: .3em;
   }
 }
 

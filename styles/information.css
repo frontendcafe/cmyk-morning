@@ -138,14 +138,22 @@ main {
 .form__container {
   margin: 3rem 1rem;
 }
+.form__container .input-container {
+  margin-bottom: 2rem;
+}
 .form input:not([type=submit]) {
   background-color: #6f6c6e;
   color: #fff;
   padding: 1rem;
   width: 95%;
-  margin-bottom: 2rem;
   border: none;
   border-radius: 0.5rem;
+}
+.form #error {
+  border: 2px solid #f00;
+}
+.form #succes {
+  border: 2px solid #080;
 }
 .form__buttom {
   background-color: #9d9d9d;
@@ -164,6 +172,12 @@ main {
 .form__buttom:hover {
   cursor: pointer;
   background-color: #000;
+}
+.form .error-info {
+  list-style: none;
+  color: #f00;
+  width: 95%;
+  padding: 0.3em;
 }
 
 @media (min-width: 768px) {
