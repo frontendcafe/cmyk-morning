@@ -51,14 +51,16 @@ main {
   justify-content: center;
   align-items: center;
   width: 75%;
+  padding-left: 2rem;
 }
 .section__location {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   color: #fff;
   padding-bottom: 10px;
+  align-self: start;
 }
 .section__location p {
   font-size: 1rem;
@@ -66,7 +68,13 @@ main {
   padding-left: 0.5rem;
 }
 .section__info p {
-  padding: 0.2rem 0;
+  margin-bottom: 0.5rem;
+}
+.section__users {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
 }
 .section__description {
   display: flex;
@@ -75,9 +83,17 @@ main {
   align-items: left;
   font-size: 0.8rem;
   font-weight: bolder;
+  align-self: start;
+}
+.section__description * {
+  margin-bottom: 0.2rem;
+}
+.section__date {
+  margin-left: 2rem;
 }
 .section__price {
   color: #fff;
+  margin-left: 2rem;
 }
 .section__icons {
   display: flex;
@@ -89,6 +105,15 @@ main {
   font-size: 0.7rem;
   color: #fff;
 }
+.section__free-item {
+  background-color: #00c39d;
+  border-radius: 5px;
+  color: #fff;
+  margin-left: 2rem;
+  padding: 10px;
+  width: fit-content;
+  text-transform: uppercase;
+}
 
 .fa-caret-left {
   color: #000;
@@ -96,12 +121,14 @@ main {
 }
 .fa-map-marker-alt {
   padding-right: 0.2rem;
+  padding-right: 0.8rem;
 }
 .fa-heart {
   padding-bottom: 0.5rem;
 }
 .fa-users {
-  padding-top: 1.5rem;
+  padding-right: 0.8rem;
+  color: #fff;
 }
 
 .form {
@@ -155,12 +182,13 @@ main {
 
 @media (min-width: 768px) {
   body {
-    background-color: #fff;
+    background-color: #e5e5e5;
   }
 
   main {
     margin: auto;
     width: 100%;
+    background: linear-gradient(61.52deg, #c4caef 6.84%, rgba(237, 192, 191, 0) 86.33%);
   }
 
   .section {
@@ -191,11 +219,13 @@ main {
     width: 100%;
   }
   .section__info p {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     line-height: 2rem;
     text-align: right;
+    margin-bottom: 1.3rem;
   }
   .section__location {
+    align-self: flex-end;
     color: #000;
   }
   .section__price {
@@ -204,6 +234,7 @@ main {
   .section__description {
     justify-content: right;
     align-items: right;
+    align-self: flex-end;
   }
   .section__icons {
     flex-direction: row;
@@ -212,6 +243,9 @@ main {
     margin-top: 1.3rem;
     color: #000;
   }
+  .section__free-item {
+    align-self: flex-end;
+  }
 
   .fa-heart {
     padding: 0 2rem;
@@ -219,6 +253,7 @@ main {
 
   .fa-users {
     padding: 0 2rem;
+    color: #000;
   }
 }
 
