@@ -60,15 +60,17 @@ main {
     justify-content: center;
     align-items: center;
     width: 75%;
+    padding-left: 2rem;
   }
 
   &__location {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     color: $light;
     padding-bottom: 10px;
+    align-self: start;
   }
 
   &__location {
@@ -81,8 +83,15 @@ main {
 
   &__info {
     p {
-      padding: 0.2rem 0;
+      margin-bottom: 0.5rem;
     }
+  }
+
+  &__users {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
   }
 
   &__description {
@@ -92,10 +101,20 @@ main {
     align-items: left;
     font-size: 0.8rem;
     font-weight: bolder;
+    align-self: start;
+
+    * {
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  &__date {
+    margin-left: 2rem;
   }
 
   &__price {
     color: $light;
+    margin-left: 2rem;
   }
 
   &__icons {
@@ -108,6 +127,16 @@ main {
     font-size: 0.7rem;
     color: $light;
   }
+
+  &__free-item {
+    background-color: #00c39d;
+    border-radius: 5px;
+    color: $light;
+    margin-left: 2rem;
+    padding: 10px;
+    width: fit-content;
+    text-transform: uppercase;
+  }
 }
 
 .fa {
@@ -118,6 +147,7 @@ main {
 
   &-map-marker-alt {
     padding-right: 0.2rem;
+    padding-right: 0.8rem;
   }
 
   &-heart {
@@ -125,7 +155,8 @@ main {
   }
 
   &-users {
-    padding-top: 1.5rem;
+    padding-right: 0.8rem;
+    color: $light;
   }
 }
 
@@ -136,16 +167,27 @@ main {
 
   &__container {
     margin: 3rem 1rem;
+    .input-container{
+      margin-bottom: 2rem;
+    }
   }
 
-  input:not([type="submit"]) {
+  input:not([type='submit']) {
     background-color: $button;
     color: $light;
     padding: 1rem;
     width: 95%;
-    margin-bottom: 2rem;
     border: none;
     border-radius: 0.5rem;
+  }
+
+  #error{
+    border: 2px solid #f00;
+  }
+
+  #succes{
+    border: 2px solid #080;
+
   }
 
   &__buttom {
@@ -169,16 +211,28 @@ main {
     cursor: pointer;
     background-color: $dark;
   }
+
+  .error-info{
+    list-style: none;
+    color: #f00;
+    width: 95%;
+    padding: .3em;
+  }
 }
 
 @media (min-width: 768px) {
   body {
-    background-color: $light;
+    background-color: #e5e5e5;
   }
 
   main {
     margin: auto;
     width: 100%;
+    background: linear-gradient(
+      61.52deg,
+      #c4caef 6.84%,
+      rgba(237, 192, 191, 0) 86.33%
+    );
   }
 
   .section {
@@ -212,13 +266,15 @@ main {
       width: 100%;
 
       p {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
         line-height: 2rem;
         text-align: right;
+        margin-bottom: 1.3rem;
       }
     }
 
     &__location {
+      align-self: flex-end;
       color: $dark;
     }
 
@@ -229,6 +285,7 @@ main {
     &__description {
       justify-content: right;
       align-items: right;
+      align-self: flex-end;
     }
 
     &__icons {
@@ -238,6 +295,10 @@ main {
       margin-top: 1.3rem;
       color: $dark;
     }
+
+    &__free-item {
+      align-self: flex-end;
+    }
   }
 
   .fa-heart {
@@ -246,5 +307,6 @@ main {
 
   .fa-users {
     padding: 0 2rem;
+    color: $dark;
   }
 }
