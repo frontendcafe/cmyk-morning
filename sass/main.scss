@@ -90,7 +90,7 @@ a:visited {
 
 .card {
   @include cardText();
-  margin: 0 8px 0 0px;
+  margin: 0 5px 0 0px;
   min-width: 292px;
   max-width: 390px;
   text-align: center;
