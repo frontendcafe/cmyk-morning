@@ -24,7 +24,7 @@ function validateMail(mail) {
 }
 
 function validateForm() {
-  removeError()
+  removeError();
   const name = $form.name.value;
   const phoneNumber = $form.phoneNumber.value;
   const mail = $form.email.value;
@@ -39,7 +39,7 @@ function validateForm() {
   };
   const success = handleErrors(errors) === 0;
   if (success) {
-    errorsContainer.classList.add('hidden')
+    errorsContainer.classList.add("hidden");
     sendForm();
     console.log("sending");
   }
@@ -50,31 +50,39 @@ function handleErrors(errors) {
   const keys = Object.keys(errors);
   keys.forEach((key) => {
     const error = errors[key];
-    const $error = '#'+key
+    const $error = "#" + key;
     if (error) {
       errorsAmount++;
       $form[key].id = "error";
-      createError($error, error)
-    }
-    else{
-      $form[key].id = 'succes' 
+      createError($error, error);
+    } else {
+      $form[key].id = "succes";
     }
   });
   return errorsAmount;
 }
 
+const errorAlert = () => {
+  Swal.fire({
+    title: "Oops...",
+    html: " <p>Something went wrong.</p> <p> Please complete all fields!</p> ",
+    icon: "warning",
+    confirmButtonText: 'Ok  <i class="fa fa-thumbs-up"></i>',
+  });
+};
+
 function createError($error, error) {
-  const errorContainer = document.querySelector($error)
-  const newP = document.createElement('p')
-  newP.className = 'error-info'
-  newP.innerText = error
-  // newP.style.fontWeight = 'bold'
-  errorContainer.appendChild(newP)
+  errorAlert();
+  const errorContainer = document.querySelector($error);
+  const newP = document.createElement("p");
+  newP.className = "error-info";
+  newP.innerText = error;
+  errorContainer.appendChild(newP);
 }
 
 function removeError() {
-  const errorsNode = document.querySelectorAll('.error-info')
-  errorsNode.forEach(error => {
-    error.remove()
+  const errorsNode = document.querySelectorAll(".error-info");
+  errorsNode.forEach((error) => {
+    error.remove();
   });
 }
