@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Training sports website" />
   <title>MornMeet</title>
-  <script src="https://kit.fontawesome.com/03cb453b70.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/03cb453b70.js" crossorigin="anonymous" defer></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <link rel="icon" type="image/ico" href="/img/morning.ico" />
   <link rel="stylesheet" href="./styles/normalize.css" />
@@ -20,7 +20,7 @@
     <nav class="nav">
       <div class="nav__title">
         <h3 class="nav__title--effect">
-          <a href="index.html"><img src="./img/morning-icon.png" alt="Morning Icon" /> MornMeet
+          <a href="index.html"><img src="./img/morning-icon.png" alt="Morning Icon" width="40px" height="22px"/> MornMeet
             Training</a>
         </h3>
 
@@ -61,10 +61,7 @@
             <p class="section__price"></p>
           </div>
         </div>
-        <!--           <div class="section__icons">
-            <i class="fas fa-heart"></i>
-            <i class="fas fa-users"></i>
-          </div>  -->
+
         </section>
       </section>
       <section class="registration">
@@ -114,10 +111,10 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
   </script>
-  <script src="./js/information.js"></script>
-  <script src="./js/form.js"></script>
-  <script src="./js/validateform.js"></script>
-  <script src="./js/mobileMenu.js"></script>
+  <script src="./js/information.js" defer></script>
+  <script src="./js/form.js" defer></script>
+  <script src="./js/validateform.js" defer></script>
+  <script src="./js/mobileMenu.js" async></script>
 </body>
 
 </html>

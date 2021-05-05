@@ -36,10 +36,8 @@ db.collection("sports")
 // ------------------------- Scroll of the cards --------------------------------------
 
 document.querySelector(".buttonRight").addEventListener("click", () => {
-  if (window.matchMedia("(max-width: 400px)").matches) {
+  if (window.matchMedia("(max-width: 600px)").matches) {
     $cards.scrollLeft += 295;
-  } else if (window.matchMedia("(max-width: 600px)").matches) {
-    $cards.scrollLeft += 317 * 2;
   } else if (window.matchMedia("(max-width: 900px)").matches) {
     $cards.scrollLeft += 317 * 2;
   } else if (window.matchMedia("(max-width: 1200px)").matches) {
