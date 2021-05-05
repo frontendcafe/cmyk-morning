@@ -5,9 +5,11 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <script src="https://kit.fontawesome.com/03cb453b70.js" crossorigin="anonymous"></script>
+  <meta name="description" content="Training sports website" />
+  <title>MornMeet</title>
+  <script src="https://kit.fontawesome.com/03cb453b70.js" crossorigin="anonymous" defer></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <link rel="icon" type="image/ico" href="/img/morning.ico" />
   <link rel="stylesheet" href="./styles/normalize.css" />
   <link rel="stylesheet" href="./styles/global.css" />
   <link rel="stylesheet" href="./styles/information.css" />
@@ -18,19 +20,20 @@
     <nav class="nav">
       <div class="nav__title">
         <h3 class="nav__title--effect">
-          <a href="index.html"><img src="./img/morning-icon.png" alt="Morning Icon" /> MornMeet
+          <a href="index.html"><img src="./img/morning-icon.png" alt="Morning Icon" width="40px" height="22px"/> MornMeet
             Training</a>
         </h3>
 
         <div class="nav__mobileMenu">
-          <img src="./img/barras.svg" alt="icon menu responsive" />
+          <i class="fas fa-bars"></i>
         </div>
       </div>
 
-      <div class="nav__link">
-        <h3><a href="https://frontend.cafe/">Frontend Cafe</a></h3>
-        <h3><a href="about.html">About Us</a></h3>
-      </div>
+        <div class="nav__link">
+          <p class="divisor">|</p>
+          <a href="/">Home</a>
+          <a href="about.html">About us</a>
+        </div>
     </nav>
   </header>
 
@@ -43,13 +46,13 @@
       </div>
       <img class="section__image" src="" alt="training photos" />
 
-      <div class="section__data">
-        <div class="section__info">
-          <div class="section__location">
-            <i class="fas fa-map-marker-alt"></i>
-            <p class="section__data-locality"></p>
-          </div>
-          <div class="section__description">
+        <section class="section__data ">
+          <div class="section__info">
+            <div class="section__location">
+              <i class="fas fa-map-marker-alt"></i>
+              <p class="section__data-locality"></p>
+            </div>
+            <div class="section__description">
             <div class="section__users">
               <i class="fas fa-users"></i>
               <p class="section__registered-people"></p>
@@ -58,41 +61,37 @@
             <p class="section__price"></p>
           </div>
         </div>
-        <!--           <div class="section__icons">
-            <i class="fas fa-heart"></i>
-            <i class="fas fa-users"></i>
-          </div>  -->
-      </div>
-    </section>
-    <form class="form" name="form">
-      <div class="form__container">
+
+        </section>
+      </section>
+      <section class="registration">
+        <h2 class="resgistration__title">
+          Join us!
+        </h2>
+        <form class="form " name="form">
+        <div class="form__container">
         <div id="name" class="input-container">
-          <input type="text" placeholder="Nombre y apellido" name="name" />
+          <input type="text" placeholder="Full Name" name="name" />
         </div>
         <div id="phoneNumber" class="input-container">
-          <input type="tel" placeholder="Telefono" name="phoneNumber" />
+          <input type="tel" placeholder="Phone: (+54) 321 1234567" name="phoneNumber" />
         </div>
         <div id="email" class="input-container">
-          <input type="email" placeholder="Email" name="email" />
+          <input type="email" placeholder="email@example.com" name="email" />
         </div>
-        <div class="errors-container hidden">
-          <ul class="errors-container__ul">
-          </ul>
+          <div class="errors-container hidden">
+            <ul class="errors-container__ul">
+            </ul>
+          </div>
+          <input type="submit" value="Submit" class="form__button" />
         </div>
-        <input type="submit" value="Registrarse" class="form__buttom" />
-      </div>
-    </form>
-  </main>
+      </form>
+      </section>
+      
+    </main>
 
-  <footer class="footer footer__items">
-    <span class="footer__text">Made by team</span>
-    <a href=""><img src="./img/morning-icon.png" alt="morning" srcset="" class="footer__image" /></a>
-    <span class="footer__text">CMYK 3 by</span>
-    <a href="https://frontend.cafe/" target="_blank"><img src="./img/frontendcafe-icon.png" alt="frontcafe" srcset=""
-        class="footer__image" /></a>
-  </footer>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
 
   <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -112,10 +111,10 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
   </script>
-  <script src="./src/information.js"></script>
-  <script src="./src/form.js"></script>
-  <script src="./src/validateform.js"></script>
-  <script src="./src/mobileMenu.js"></script>
+  <script src="./js/information.js" defer></script>
+  <script src="./js/form.js" defer></script>
+  <script src="./js/validateform.js" defer></script>
+  <script src="./js/mobileMenu.js" async></script>
 </body>
 
 </html>

@@ -4,12 +4,9 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #af90e4;
-}
-
 main {
   padding: 5px 10px;
+  background: linear-gradient(120.52deg, #adb7f3 26.84%, rgba(255, 255, 255, 0) 86.33%);
 }
 
 .section {
@@ -33,9 +30,9 @@ main {
 }
 .section__image {
   order: 2;
-  max-width: 60%;
+  max-width: 70%;
   margin: 0 auto;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 .section__data {
   display: flex;
@@ -65,7 +62,6 @@ main {
 .section__location p {
   font-size: 1rem;
   font-weight: bolder;
-  padding-left: 0.5rem;
 }
 .section__info p {
   margin-bottom: 0.5rem;
@@ -120,8 +116,7 @@ main {
   padding-right: 1.5rem;
 }
 .fa-map-marker-alt {
-  padding-right: 0.2rem;
-  padding-right: 0.8rem;
+  padding-right: 0.5rem;
 }
 .fa-heart {
   padding-bottom: 0.5rem;
@@ -133,13 +128,12 @@ main {
 
 .form {
   width: min(40rem, 100%);
-  margin: 0 auto;
 }
 .form__container {
   margin: 3rem 1rem;
 }
 .form__container .input-container {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .form input:not([type=submit]) {
   background-color: #6f6c6e;
@@ -155,13 +149,14 @@ main {
 .form #succes {
   border: 2px solid #080;
 }
-.form__buttom {
+.form__button {
   background-color: #9d9d9d;
   padding: 1.5rem;
   width: 95%;
   color: #fff;
   border: none;
   border-radius: 0.5rem;
+  margin: 0 auto;
 }
 .form input::placeholder {
   color: #fff;
@@ -169,7 +164,7 @@ main {
 .form input:focus {
   outline: none;
 }
-.form__buttom:hover {
+.form__button:hover {
   cursor: pointer;
   background-color: #000;
 }
@@ -180,15 +175,19 @@ main {
   padding: 0.3em;
 }
 
-@media (min-width: 768px) {
-  body {
-    background-color: #e5e5e5;
-  }
+.registration {
+  margin: 2rem 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+@media (min-width: 768px) {
   main {
     margin: auto;
     width: 100%;
-    background: linear-gradient(61.52deg, #c4caef 6.84%, rgba(237, 192, 191, 0) 86.33%);
+    background: linear-gradient(61.52deg, #c4caef 6.84%, rgba(255, 255, 255, 0) 86.33%);
   }
 
   .section {
@@ -197,7 +196,7 @@ main {
   }
   .section__title {
     width: 100%;
-    padding: 0 0 1.2rem 3rem;
+    padding: 1rem 0 1.2rem 7rem;
     color: #000;
     font-weight: bolder;
     font-size: 1.5rem;
@@ -219,7 +218,7 @@ main {
     width: 100%;
   }
   .section__info p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 2rem;
     text-align: right;
     margin-bottom: 1.3rem;

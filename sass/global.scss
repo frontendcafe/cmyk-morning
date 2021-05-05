@@ -1,6 +1,9 @@
-$header: #a1e5f4;
+$header: transparent;
 $light: #fff;
-$footer: rgba(255, 196, 176, 0.753);
+$footer: #c4caef;
+$morning: #f5875e;
+
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Raleway:wght@400;700&display=swap");
 
 * {
   margin: 0;
@@ -8,24 +11,24 @@ $footer: rgba(255, 196, 176, 0.753);
   box-sizing: border-box;
 }
 
+a:visited {
+  color: #d8572a;
+}
+
 body {
-  height: 90vh;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Raleway", Tahoma, sans-serif;
 }
 
 .header {
   background-color: $header;
   width: 100%;
-  position: sticky; /* fix the position of the header  */
-  top: 0;
   -webkit-box-shadow: 0px 0px 8px 1px rgba(148, 148, 148, 1);
   box-shadow: 0px 0px 8px 1px rgba(148, 148, 148, 1);
-  position: sticky;
-  top: 0;
 
   a {
-    text-decoration: none;
+    //   text-decoration: none;
     color: inherit;
+    padding: 1rem 0;
   }
 }
 
@@ -37,6 +40,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: "Itim", sans-serif;
+    font-size: 1.5rem;
+    color: #d8572a;
 
     &--effect {
       transition: all 0.5s;
@@ -45,14 +51,14 @@ body {
     &--effect:hover {
       transform: scale(1.2, 1.2);
     }
+
+    &:visited {
+      color: #d8572a;
+    }
   }
   &__mobileMenu {
     display: block;
-    img {
-      width: 2rem;
-    }
-  }
-  &__title img {
+    width: 2rem;
     margin: 0 0.5rem;
   }
   &__link {
@@ -79,8 +85,18 @@ body {
   }
 }
 
+.fa-bars {
+  color: #000;
+  padding-right: 0.5rem;
+}
+
+.divisor {
+  visibility: hidden;
+}
+
 .show {
-  display: block;
+  display: flex;
+  flex-direction: column;
 
   h3 {
     padding: 0.5rem 0;
@@ -97,15 +113,29 @@ body {
     &__title img {
       margin-right: 1rem;
     }
+
     &__mobileMenu {
       display: none;
     }
     &__link {
       display: flex;
-      column-gap: 1.5rem;
+      flex-direction: row;
+      column-gap: 2rem;
+      padding: 0 2rem;
     }
   }
+  .divisor {
+    visibility: visible;
+    padding: 1rem 0;
+  }
   .show {
+    // display: block;
+    // .nav__item {
+    //   background-color: $morning;
+    //   width: 80%;
+    //   border-radius: 5rem;
+    //   margin: 0.2rem auto;
+    // }
     h3 {
       padding: 0;
     }
@@ -130,11 +160,9 @@ body {
   }
 }
 
-main {
-  min-height: 100%;
-}
-
 .footer {
+  padding: 1rem 0;
+
   a {
     text-decoration: none;
     color: inherit;

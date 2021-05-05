@@ -1,28 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Raleway:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+a:visited {
+  color: #d8572a;
+}
+
 body {
-  height: 90vh;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Raleway", Tahoma, sans-serif;
 }
 
 .header {
-  background-color: #a1e5f4;
+  background-color: transparent;
   width: 100%;
-  position: sticky;
-  /* fix the position of the header  */
-  top: 0;
   -webkit-box-shadow: 0px 0px 8px 1px #949494;
   box-shadow: 0px 0px 8px 1px #949494;
-  position: sticky;
-  top: 0;
 }
 .header a {
-  text-decoration: none;
   color: inherit;
+  padding: 1rem 0;
 }
 
 .nav {
@@ -33,6 +32,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: "Itim", sans-serif;
+  font-size: 1.5rem;
+  color: #d8572a;
 }
 .nav__title--effect {
   transition: all 0.5s;
@@ -41,13 +43,12 @@ body {
 .nav__title--effect:hover {
   transform: scale(1.2, 1.2);
 }
+.nav__title:visited {
+  color: #d8572a;
+}
 .nav__mobileMenu {
   display: block;
-}
-.nav__mobileMenu img {
   width: 2rem;
-}
-.nav__title img {
   margin: 0 0.5rem;
 }
 .nav__link {
@@ -70,8 +71,18 @@ body {
     transform: translateX(15%);
   }
 }
+.fa-bars {
+  color: #000;
+  padding-right: 0.5rem;
+}
+
+.divisor {
+  visibility: hidden;
+}
+
 .show {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 .show h3 {
   padding: 0.5rem 0;
@@ -92,7 +103,14 @@ body {
   }
   .nav__link {
     display: flex;
-    column-gap: 1.5rem;
+    flex-direction: row;
+    column-gap: 2rem;
+    padding: 0 2rem;
+  }
+
+  .divisor {
+    visibility: visible;
+    padding: 1rem 0;
   }
 
   .show h3 {
@@ -117,16 +135,15 @@ body {
     }
   }
 }
-main {
-  min-height: 100%;
+.footer {
+  padding: 1rem 0;
 }
-
 .footer a {
   text-decoration: none;
   color: inherit;
 }
 .footer__items {
-  background-color: rgba(255, 196, 176, 0.753);
+  background-color: #c4caef;
   display: flex;
   flex-direction: row;
   justify-content: center;
