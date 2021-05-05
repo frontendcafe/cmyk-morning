@@ -1,133 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Training sports website" />
-    <title>MornMeet</title>
-    <link rel="icon" type="image/ico" href="/img/morning.ico" />
-    <link rel="stylesheet" href="./styles/normalize.css" />
-    <link rel="stylesheet" href="./styles/global.css" />
-    <link rel="stylesheet" href="./styles/main.css" />
-    <script
-      src="https://kit.fontawesome.com/625fc00c69.js"
-      crossorigin="anonymous"
-      defer
-    ></script>
-  </head>
 
-  <body>
-    <header class="header">
-      <nav class="nav">
-        <div class="nav__title">
-          <h3 class="nav__title--effect">
-            <a href="index.html"
-              ><img
-                src="./img/morning-icon.png"
-                alt="Morning Icon"
-                width="40px"
-                height="22px"
-              />
-              MornMeet Training</a
-            >
-          </h3>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Training sports website" />
+  <title>MornMeet</title>
+  <link rel="icon" type="image/ico" href="/img/morning.ico" />
+  <link rel="stylesheet" href="./styles/normalize.css" />
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/main.css" />
+  <script src="https://kit.fontawesome.com/625fc00c69.js" crossorigin="anonymous" defer></script>
+</head>
 
-          <div class="nav__mobileMenu">
-            <i class="fas fa-bars"></i>
-          </div>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="nav__title">
+        <h3 class="nav__title--effect">
+          <a href="index.html"><img src="./img/morning-icon.png" alt="Morning Icon" width="40px" height="22px" />
+            MornMeet Training</a>
+        </h3>
+
+        <div class="nav__mobileMenu">
+          <i class="fas fa-bars"></i>
         </div>
+      </div>
 
-        <div class="nav__link">
-          <p class="divisor">|</p>
-          <a href="#categories" class="nav__item">Sports</a>
-          <a href="about.html" class="nav__item">About us</a>
-        </div>
-      </nav>
-    </header>
+      <div class="nav__link">
+        <p class="divisor">|</p>
+        <a href="#categories" class="nav__item">Sports</a>
+        <a href="about.html" class="nav__item">About us</a>
+      </div>
+    </nav>
+  </header>
 
-    <main>
-      <section class="banner">
-        <div class="banner__video">
-          <h2 class="banner__title">
-            <span class="banner__title--boldText">Find</span> a group to train
-            your favorite sport
-          </h2>
+  <main>
+    <section class="banner">
+      <div class="banner__video">
+        <h2 class="banner__title">
+          <span class="banner__title--boldText">Find</span> a group to train
+          your favorite sport
+        </h2>
 
-          <video loop autoplay muted preload="auto">
-            <source src="./img/banner.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div class="banner__description">
-          <h3>Enroll now! There are a lot of sports to train with us.</h3>
-          <p>
-            Join a group to train with other people, there are events happening
-            both online and in person!
-          </p>
-        </div>
-      </section>
-      <section class="section__cards">
-        <h2 class="cards__categories" id="categories">Categories</h2>
+        <video loop autoplay muted preload="auto">
+          <source src="./img/banner.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="banner__description">
+        <h3>Enroll now! There are a lot of sports to train with us.</h3>
+        <p>
+          Join a group to train with other people, there are events happening
+          both online and in person!
+        </p>
+      </div>
+    </section>
+    <section class="section__cards">
+      <h2 class="cards__categories" id="categories">Categories</h2>
 
-        <div class="cards__navigation">
-          <button class="buttonLeft" aria-label="Scroll Left">
-            <i class="fas fa-chevron-left"></i>
-          </button>
+      <div class="cards__navigation">
+        <button class="buttonLeft" aria-label="Scroll Left">
+          <i class="fas fa-chevron-left"></i>
+        </button>
 
-          <div id="cards" class="carousel"></div>
+        <div id="cards" class="carousel"></div>
 
-          <button class="buttonRight" aria-label="Scroll Right">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </div>
-      </section>
-    </main>
+        <button class="buttonRight" aria-label="Scroll Right">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+  </main>
 
-    <footer class="footer footer__items">
-      <span class="footer__text">Made by team</span>
-      <a href="/"
-        ><img
-          src="./img/morning-icon.png"
-          alt="morning"
-          srcset=""
-          class="footer__image"
-          width="40px"
-          height="22px"
-      /></a>
-      <span class="footer__text">CMYK 3 by</span>
-      <a href="https://frontend.cafe/" target="_blank" rel="noopener">
-        <img
-          src="./img/frontendcafe-icon.png"
-          alt="frontcafe"
-          srcset=""
-          class="footer__image"
-          width="30px"
-          height="31px"
-        />
-      </a>
-    </footer>
+  <footer class="footer footer__items">
+    <span class="footer__text">Made by team</span>
+    <a href="/"><img src="./img/morning-icon.png" alt="morning" srcset="" class="footer__image" width="40px"
+        height="22px" /></a>
+    <span class="footer__text">CMYK 3 by</span>
+    <a href="https://frontend.cafe/" target="_blank" rel="noopener">
+      <img src="./img/frontendcafe-icon.png" alt="frontcafe" srcset="" class="footer__image" width="30px"
+        height="31px" />
+    </a>
+  </footer>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+  <!-- TODO: Add SDKs for Firebase products that you want to use
       https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
 
-    <script>
-      // Your web app's Firebase configuration
-      let firebaseConfig = {
-        apiKey: "AIzaSyCgsS9QNgNtKw_UAaKUpNbI8Tim03fkHtI",
-        authDomain: "morn-meet-training.firebaseapp.com",
-        projectId: "morn-meet-training",
-        storageBucket: "morn-meet-training.appspot.com",
-        messagingSenderId: "271073410817",
-        appId: "1:271073410817:web:07183279cde4bb90ace500",
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    </script>
-    <script src="./js/app.js" defer></script>
-    <script src="./js/mobileMenu.js" async></script>
-  </body>
+  <script>
+    // Your web app's Firebase configuration
+    let firebaseConfig = {
+      apiKey: "AIzaSyCgsS9QNgNtKw_UAaKUpNbI8Tim03fkHtI",
+      authDomain: "morn-meet-training.firebaseapp.com",
+      projectId: "morn-meet-training",
+      storageBucket: "morn-meet-training.appspot.com",
+      messagingSenderId: "271073410817",
+      appId: "1:271073410817:web:07183279cde4bb90ace500",
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="./js/app.js" defer></script>
+  <script src="./js/mobileMenu.js"></script>
+</body>
+
 </html>
