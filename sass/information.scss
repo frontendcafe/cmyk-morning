@@ -1,8 +1,7 @@
 $light: #fff;
 $dark: #000;
 $cycling: #af90e4;
-$button: #6f6c6e;
-$form: #9d9d9d;
+$form: #202020;
 
 * {
   margin: 0;
@@ -167,27 +166,26 @@ main {
 
   &__container {
     margin: 3rem 1rem;
-    .input-container{
+    .input-container {
       margin-bottom: 2rem;
     }
   }
 
   input:not([type='submit']) {
-    background-color: $button;
-    color: $light;
+    background-color: $light;
+    color: $form;
     padding: 1rem;
     width: 95%;
     border: none;
     border-radius: 0.5rem;
   }
 
-  #error{
+  #error {
     border: 2px solid #f00;
   }
 
-  #succes{
+  #succes {
     border: 2px solid #080;
-
   }
 
   &__buttom {
@@ -200,7 +198,7 @@ main {
   }
 
   input::placeholder {
-    color: $light;
+    color: $form;
   }
 
   input:focus {
@@ -212,11 +210,11 @@ main {
     background-color: $dark;
   }
 
-  .error-info{
+  .error-info {
     list-style: none;
     color: #f00;
     width: 95%;
-    padding: .3em;
+    padding: 0.3em;
   }
 }
 
