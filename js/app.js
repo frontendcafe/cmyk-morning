@@ -15,7 +15,7 @@ db.collection("sports")
       <a href="../information.html?id=${card.id}">
       <section class="card card-${card.index}">
         <div class="rectangle">
-          <h4 class="card__title">${card.sport}</h4>
+          <div class="card__title">${card.sport}</div>
           <p "card__location">${card.city}, ${card.country}</p>
         </div>
         <div class="footer-card">
