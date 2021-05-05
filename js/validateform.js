@@ -39,7 +39,6 @@ function validateForm() {
   };
   const success = handleErrors(errors) === 0;
   if (success) {
-    errorsContainer.classList.add("hidden");
     sendForm();
     console.log("sending");
   }
