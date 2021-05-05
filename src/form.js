@@ -47,12 +47,6 @@ const incrementEnrolled = (sport) => {
   db.collection("sports").doc(`${sport}`).update({ enrolled: increment });
 };
 
-const identifySport = () => {
-  const sportTitle = document
-    .querySelector(".section__title-activity")
-    .textContent.toLowerCase();
-  return sportTitle.replace(" ", "-");
-};
 
 const succesAlert = (name) => {
   Swal.fire("Done " + name + "!", "Registration succesfull", "success").then(
