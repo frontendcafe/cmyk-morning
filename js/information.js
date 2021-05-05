@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             '.section__registered-people'
           );
           const signedupValue = actividad.enrolled;
-          signedUp.innerHTML = `${signedupValue}   people registred`;
+          signedUp.innerHTML = `${signedupValue}   people registered`;
 
           document.querySelector('.form').setAttribute('id', doc.id);
         }

@@ -136,8 +136,8 @@ main {
   margin-bottom: 1rem;
 }
 .form input:not([type=submit]) {
-  background-color: #6f6c6e;
-  color: #fff;
+  background-color: #fff;
+  color: #202020;
   padding: 1rem;
   width: 95%;
   border: none;
@@ -150,7 +150,7 @@ main {
   border: 2px solid #080;
 }
 .form__button {
-  background-color: #9d9d9d;
+  background-color: #202020;
   padding: 1.5rem;
   width: 95%;
   color: #fff;
@@ -159,7 +159,7 @@ main {
   margin: 0 auto;
 }
 .form input::placeholder {
-  color: #fff;
+  color: #202020;
 }
 .form input:focus {
   outline: none;
