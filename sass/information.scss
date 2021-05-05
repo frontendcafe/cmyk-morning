@@ -9,12 +9,13 @@ $form: #202020;
   box-sizing: border-box;
 }
 
-body {
-  background-color: $cycling;
-}
-
 main {
   padding: 5px 10px;
+  background: linear-gradient(
+    120.52deg,
+    #adb7f3 26.84%,
+    rgba(255, 255, 255, 0) 86.33%
+  );
 }
 
 .section {
@@ -39,9 +40,9 @@ main {
 
   &__image {
     order: 2;
-    max-width: 60%;
+    max-width: 70%;
     margin: 0 auto;
-    border-radius: 10px;
+    border-radius: 6px;
   }
 
   &__data {
@@ -76,7 +77,6 @@ main {
     p {
       font-size: 1rem;
       font-weight: bolder;
-      padding-left: 0.5rem;
     }
   }
 
@@ -145,8 +145,7 @@ main {
   }
 
   &-map-marker-alt {
-    padding-right: 0.2rem;
-    padding-right: 0.8rem;
+    padding-right: 0.5rem;
   }
 
   &-heart {
@@ -162,12 +161,11 @@ main {
 // Form
 .form {
   width: min(40rem, 100%);
-  margin: 0 auto;
 
   &__container {
     margin: 3rem 1rem;
     .input-container {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
   }
 
@@ -188,13 +186,14 @@ main {
     border: 2px solid #080;
   }
 
-  &__buttom {
+  &__button {
     background-color: $form;
     padding: 1.5rem;
     width: 95%;
     color: $light;
     border: none;
     border-radius: 0.5rem;
+    margin: 0 auto;
   }
 
   input::placeholder {
@@ -205,7 +204,7 @@ main {
     outline: none;
   }
 
-  &__buttom:hover {
+  &__button:hover {
     cursor: pointer;
     background-color: $dark;
   }
@@ -218,18 +217,22 @@ main {
   }
 }
 
-@media (min-width: 768px) {
-  body {
-    background-color: #e5e5e5;
-  }
+.registration {
+  margin: 2rem 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+@media (min-width: 768px) {
   main {
     margin: auto;
     width: 100%;
     background: linear-gradient(
       61.52deg,
       #c4caef 6.84%,
-      rgba(237, 192, 191, 0) 86.33%
+      rgba(255, 255, 255, 0) 86.33%
     );
   }
 
@@ -239,7 +242,7 @@ main {
 
     &__title {
       width: 100%;
-      padding: 0 0 1.2rem 3rem;
+      padding: 1rem 0 1.2rem 7rem;
       color: $dark;
       font-weight: bolder;
       font-size: 1.5rem;
@@ -264,7 +267,7 @@ main {
       width: 100%;
 
       p {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         line-height: 2rem;
         text-align: right;
         margin-bottom: 1.3rem;
