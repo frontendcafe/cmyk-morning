@@ -5,37 +5,41 @@ const $card = document.querySelector(".card");
 
 db = firebase.firestore();
 
-db.collection("sports").get().then((querySnapshot) => {
-  querySnapshot.forEach((doc) => {
-    let card = doc.data();
+db.collection("sports")
+  .get()
+  .then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+      let card = doc.data();
 
-    $cards.innerHTML += `
-	  <a href="../information.html?id=${card.id}">
-	    <section class="card card-${card.index}">
-	      <div class="rectangle">
-	      <h4 class="card__title">${card.sport}</h4>
-	      <p "card__location">${card.city}, ${card.country}</p>
-	      </div>
-	      <div class="footer-card">
-		<div class="icons">
-		  <i class="fas fa-heart"></i>
-		</div>
-	      <p>
-		<i class="fas fa-users"></i> ${card.enrolled} personas inscritas</p>
-	      <p>${card.cost}</p>
-	      </div> 
-	    </section>
-	  </a>
-	  
-	  `;
+      $cards.innerHTML += ` 
+      <a href="../information.html?id=${card.id}">
+      <section class="card card-${card.index}">
+        <div class="rectangle">
+          <h4 class="card__title">${card.sport}</h4>
+          <p "card__location">${card.city}, ${card.country}</p>
+        </div>
+        <div class="footer-card">
+          <div class="icons">
+            <i class="fas fa-heart"></i>
+          </div>
+          <p>
+            <i class="fas fa-users"></i> ${card.enrolled} personas inscritas
+          </p>
+          <p>${card.cost}</p>
+        </div>
+      </section>
+      </a>
+      `;
+    });
   });
-});
 
 // ------------------------- Scroll of the cards --------------------------------------
 
 document.querySelector(".buttonRight").addEventListener("click", () => {
-  if (window.matchMedia("(max-width: 600px)").matches) {
-    $cards.scrollLeft += 290;
+  if (window.matchMedia("(max-width: 400px)").matches) {
+    $cards.scrollLeft += 295;
+  } else if (window.matchMedia("(max-width: 600px)").matches) {
+    $cards.scrollLeft += 317 * 2;
   } else if (window.matchMedia("(max-width: 900px)").matches) {
     $cards.scrollLeft += 317 * 2;
   } else if (window.matchMedia("(max-width: 1200px)").matches) {
@@ -49,7 +53,7 @@ document.querySelector(".buttonRight").addEventListener("click", () => {
 
 document.querySelector(".buttonLeft").addEventListener("click", () => {
   if (window.matchMedia("(max-width: 600px)").matches) {
-    $cards.scrollLeft -= 317;
+    $cards.scrollLeft -= 290;
   } else if (window.matchMedia("(max-width: 900px)").matches) {
     $cards.scrollLeft -= 317 * 2;
   } else if (window.matchMedia("(max-width: 1200px)").matches) {
