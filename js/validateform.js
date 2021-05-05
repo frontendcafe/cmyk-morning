@@ -18,7 +18,7 @@ function validatePhoneNumber(phoneNumber) {
 
 function validateMail(mail) {
   if (mail.length < 1) {
-    return "please enter a valid mail";
+    return "Please enter a valid mail";
   }
   return "";
 }
@@ -62,17 +62,7 @@ function handleErrors(errors) {
   return errorsAmount;
 }
 
-const errorAlert = () => {
-  Swal.fire({
-    title: "Oops...",
-    html: " <p>Something went wrong.</p> <p> Please complete all fields!</p> ",
-    icon: "warning",
-    confirmButtonText: 'Ok  <i class="fa fa-thumbs-up"></i>',
-  });
-};
-
 function createError($error, error) {
-  errorAlert();
   const errorContainer = document.querySelector($error);
   const newP = document.createElement("p");
   newP.className = "error-info";
