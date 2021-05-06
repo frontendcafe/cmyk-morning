@@ -1,6 +1,11 @@
 h1 {
   margin: 0 0;
 }
+
+main {
+  min-height: calc(100vh - 11.3rem);
+}
+
 .container {
   max-width: 95%;
   margin: 1rem auto;
@@ -22,7 +27,7 @@ h1 {
   padding: 2rem;
 
   h1 {
-    font-family: "Itim";
+    font-family: 'Itim';
     color: #f5875e;
     padding-bottom: 0.5rem;
   }
@@ -35,20 +40,20 @@ h1 {
 .cards {
   &__pink {
     color: #fff;
-    background: url("/img/pink.png") no-repeat;
+    background: url('/img/pink.png') no-repeat;
     background-size: cover;
   }
 
   &__red {
     color: #fff;
-    background: url("/img/red.png") no-repeat;
+    background: url('/img/red.png') no-repeat;
     background-size: cover;
     opacity: 0.9;
   }
 
   &__blue {
     color: #fff;
-    background: url("/img/blue.png") no-repeat;
+    background: url('/img/blue.png') no-repeat;
     background-size: cover;
   }
 }
@@ -66,10 +71,6 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1.5fr);
   }
-}
-
-main {
-  min-height: 95%;
 }
 
 .cards {

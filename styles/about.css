@@ -2,6 +2,10 @@ h1 {
   margin: 0 0;
 }
 
+main {
+  min-height: calc(100vh - 11.3rem);
+}
+
 .container {
   max-width: 95%;
   margin: 1rem auto;
@@ -64,10 +68,6 @@ h1 {
     grid-template-rows: repeat(3, 1.5fr);
   }
 }
-main {
-  min-height: 95%;
-}
-
 .cards {
   max-width: 373.6px;
   border-radius: 1rem;
