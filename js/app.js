@@ -37,7 +37,7 @@ db.collection("sports")
 
 document.querySelector(".buttonRight").addEventListener("click", () => {
   if (window.matchMedia("(max-width: 600px)").matches) {
-    $cards.scrollLeft += 295;
+    $cards.scrollLeft += 300;
   } else if (window.matchMedia("(max-width: 900px)").matches) {
     $cards.scrollLeft += 317 * 2;
   } else if (window.matchMedia("(max-width: 1200px)").matches) {
@@ -51,7 +51,7 @@ document.querySelector(".buttonRight").addEventListener("click", () => {
 
 document.querySelector(".buttonLeft").addEventListener("click", () => {
   if (window.matchMedia("(max-width: 600px)").matches) {
-    $cards.scrollLeft -= 290;
+    $cards.scrollLeft -= 300;
   } else if (window.matchMedia("(max-width: 900px)").matches) {
     $cards.scrollLeft -= 317 * 2;
   } else if (window.matchMedia("(max-width: 1200px)").matches) {

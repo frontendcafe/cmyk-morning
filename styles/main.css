@@ -239,6 +239,12 @@ main {
 }
 
 @media (min-width: 48em) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
   .banner {
     padding-top: 2rem;
   }

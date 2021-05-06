@@ -169,7 +169,7 @@ main {
     }
   }
 
-  input:not([type='submit']) {
+  input:not([type="submit"]) {
     background-color: $light;
     color: $form;
     padding: 1rem;
@@ -234,6 +234,7 @@ main {
       #c4caef 6.84%,
       rgba(255, 255, 255, 0) 86.33%
     );
+    height: 100vh;
   }
 
   .section {
