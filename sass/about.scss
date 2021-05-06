@@ -38,27 +38,11 @@ main {
 }
 
 .cards {
-  &__pink {
-    color: #fff;
-    background: url('/img/pink.png') no-repeat;
-    background-size: cover;
-  }
-
-  &__red {
-    color: #fff;
-    background: url('/img/red.png') no-repeat;
-    background-size: cover;
-    opacity: 0.9;
-  }
-
-  &__blue {
-    color: #fff;
-    background: url('/img/blue.png') no-repeat;
-    background-size: cover;
-  }
+  background-color: rgb(39, 35, 35);
+  color: #fff;
 }
 
-@media (min-width: 460px) {
+@media (min-width: 540px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -74,7 +58,6 @@ main {
 }
 
 .cards {
-  max-width: 373.6px;
   border-radius: 1rem;
 
   display: flex;
@@ -86,11 +69,16 @@ main {
 
   &__content {
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
     text-shadow: 1px 1px 1px rgb(95, 95, 95);
 
     p {
       margin-top: 0.5rem;
+    }
+
+    img {
+      height: 4.5rem;
+      border-radius: 50%;
     }
   }
 
@@ -109,11 +97,5 @@ main {
     a {
       color: inherit;
     }
-  }
-}
-
-@media (min-width: 768px) {
-  .cards {
-    max-height: 190px;
   }
 }

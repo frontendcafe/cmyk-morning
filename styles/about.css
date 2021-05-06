@@ -36,24 +36,12 @@ main {
   text-align: justify;
 }
 
-.cards__pink {
+.cards {
+  background-color: #272323;
   color: #fff;
-  background: url("/img/pink.png") no-repeat;
-  background-size: cover;
-}
-.cards__red {
-  color: #fff;
-  background: url("/img/red.png") no-repeat;
-  background-size: cover;
-  opacity: 0.9;
-}
-.cards__blue {
-  color: #fff;
-  background: url("/img/blue.png") no-repeat;
-  background-size: cover;
 }
 
-@media (min-width: 460px) {
+@media (min-width: 540px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -69,7 +57,6 @@ main {
   }
 }
 .cards {
-  max-width: 373.6px;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -79,11 +66,15 @@ main {
 }
 .cards__content {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
   text-shadow: 1px 1px 1px #5f5f5f;
 }
 .cards__content p {
   margin-top: 0.5rem;
+}
+.cards__content img {
+  height: 4.5rem;
+  border-radius: 50%;
 }
 .cards__icons {
   margin-bottom: 1rem;
@@ -99,12 +90,6 @@ main {
 }
 .cards__icons a {
   color: inherit;
-}
-
-@media (min-width: 768px) {
-  .cards {
-    max-height: 190px;
-  }
 }
 
 /*# sourceMappingURL=about.css.map */
