@@ -6,18 +6,18 @@
   <h1 align="center">CMYK - MORNING</h1>
 </a>
 
-**Idioma**
+**Language**
 
-* Español
-* <a taret="_blank" href="https://github.com/frontendcafe/cmyk-morning/blob/main/readme-en.md">Inglés</a>
+* <a href="https://github.com/frontendcafe/cmyk-morning/" target="_blank">Spanish</a>
+* English
 
-Este proyecto es un sitio web usado para organizar grupos de entrenamiento
-consumiendo de una Base de Datos hecha en Firebase. En este proyecto
-se usan los siguientes lenguajes y tecnologías:
+This project is a website used to organize training groups consuming from a
+Database made in Firebase. The following languages and technologies are used in
+this project:
 
-HTML, CSS, SASS, BEM y JavaScript.
+HTML, CSS, SASS, BEM and JavaScript.
 
-El equipo que ha realizado este proyecto está conformado por:
+The team that has done this project is made up of:
 
 * <a href="https://github.com/Carlosa1Gomez" color="green">Carlos Gomez</a>
 
@@ -33,8 +33,8 @@ El equipo que ha realizado este proyecto está conformado por:
 
 * <a href="https://github.com/cardosoe" color="green">Ezequiel Cardoso</a>
 
-Para contribuir a este proyecto le puedes hacer fork y realizar un pull request
-con los cambios realizados.
+To contribute to this project you can fork it and make a pull request with the
+changes made.
 
-El link de la página donde está alojado el proyecto es
+The link of the page where the project is hosted is
 <a color="#7D30C4" target="_blank" href="https://mornmeet-training.netlify.app">https://mornmeet-training.netlify.app</a>
